@@ -1,0 +1,24 @@
+title: "HyEngine"
+description: "Official site and documentation for the HyEngine 2D C++ Game Engine"
+baseurl: ""
+url: "https://hyengine.org"
+theme: null
+markdown: kramdown
+kramdown:
+input: GFM
+
+
+collections:
+docs:
+output: true
+permalink: /docs/:name/
+
+
+plugins:
+- jekyll-feed
+- jekyll-seo-tag
+
+
+# SEO emphasis
+seo_title: "HyEngine — Harmony Engine"
+keywords: [HyEngine, Harmony Engine, 2D game engine, C++, OpenGL, WebAssembly, Browser based]

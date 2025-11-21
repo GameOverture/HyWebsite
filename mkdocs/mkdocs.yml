@@ -1,19 +1,24 @@
 site_name: HyEngine Documentation
 site_url: https://hyengine.org/docs/
 site_dir: ../docs
-theme:
-  name: material
-  palette:
-    - scheme: default
-      primary: deep orange
-      accent: orange
 nav:
   - Home: index.md
   - Getting Started:
       - Installation & Setup: install.md
       - First Project: first_project.md
-  - Fundamentals:
-      - Overview: fundamentals/overview.md
+      - Project Structure Overview: overview.md
+  - Editor Manual:
+      - Projects: editor/projects.md
+      - Asset Manager:
+          - Atlases: editor/atlas_manager.md
+          - TileSet: editor/tilesets.md
+      - Project Items:
+          - Sprites: editor/sprites.md
+          - Tile Map: editor/tilemap.md
+          - Text: editor/text.md
+          - Spine: editor/spine.md
+          - Audio: editor/audio.md
+          - Entity: editor/entity.md
       - Language & Coding Style: fundamentals/language.md
       - Architecture: fundamentals/architecture.md
       - Data Flow & Game Loop: fundamentals/dataflow.md

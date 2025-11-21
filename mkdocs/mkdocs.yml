@@ -1,0 +1,33 @@
+site_name: HyEngine Documentation
+site_url: https://hyengine.org/docs/
+site_dir: ../docs
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: deep orange
+      accent: orange
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation & Setup: install.md
+      - First Project: first_project.md
+  - Fundamentals:
+      - Overview: fundamentals/overview.md
+      - Language & Coding Style: fundamentals/language.md
+      - Architecture: fundamentals/architecture.md
+      - Data Flow & Game Loop: fundamentals/dataflow.md
+  - Engine Systems:
+      - Engine Overview: engine/overview.md
+      - Components: engine/components.md
+      - Systems: engine/systems.md
+      - Render & Update Pipelines: engine/pipelines.md
+      - Assets & Resource Management: engine/assets.md
+  - API Reference:
+      - Core API: api/core.md
+      - Graphics API: api/graphics.md
+      - Physics API: api/physics.md
+      - Input API: api/input.md
+      - UI / Editor Integration: api/ui.md
+  - HyExamples:
+      - Examples Index: examples/index.md

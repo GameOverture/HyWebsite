@@ -1,8 +1,229 @@
-<div class="hero">
-<h1>HyEngine</h1>
-<p>Harmony is a game engine for developers who want full control on how the game is programmed, while providing an WYSIWYG editor for all the annoying things</p>
-<a class="button" href="/docs/">Get Started</a>
-</div>
-<footer style="padding:20px; text-align:center; margin-top:40px; color:#888;">
-© 2012-2025 HyEngine - Jason Knobler (Game Overture)
-</footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HyEngine — Harmony Engine</title>
+
+    <style>
+        :root {
+            --hy-orange: #FA5A0A;
+            --hy-green: #00FF7F;
+            --bg-dark: #0f0f0f;
+            --bg-card: #1a1a1a;
+            --text-light: #e6e6e6;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Top Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 20px 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 650px;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1.1rem;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            background: var(--hy-orange);
+            transition: 0.2s ease-in-out;
+        }
+
+        .btn:hover {
+            background: #d94907;
+        }
+
+        .btn.secondary {
+            background: none;
+            border: 2px solid var(--hy-orange);
+        }
+
+        .btn.secondary:hover {
+            background: var(--hy-orange);
+        }
+
+        /* Feature Grid */
+        .feature-section {
+            padding: 60px 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid #222;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: var(--hy-orange);
+        }
+
+        .card img {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: var(--hy-orange);
+        }
+
+        .card p {
+            opacity: 0.85;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 20px;
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 800px) {
+            .hero h1 { font-size: 2.6rem; }
+            .hero p { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>HyEngine</h1>
+        <p>
+            The powerful 2D game engine designed for developers who want full control over their code —  
+            with a modern visual editor to handle everything else.
+        </p>
+
+        <div class="buttons">
+            <a href="https://github.com/GameOverture/HarmonyEngine/releases" class="btn">
+                Download HyEngine
+            </a>
+            <a href="/docs" class="btn secondary">
+                Read Documentation
+            </a>
+        </div>
+    </section>
+
+    <!-- FEATURE GRID -->
+    <section class="feature-section">
+        <div class="feature-grid">
+
+            <div class="card">
+                <img src="assets/editor_icon.png" alt="Editor Icon" />
+                <h3>Powerful WYSIWYG Editor</h3>
+                <p>
+                    HyEditor manages assets, builds, animation timelines, entities, visual layouts, and 
+                    auto-generates clean C++ gameplay classes.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="assets/opengl_icon.png" alt="Rendering Icon" />
+                <h3>OpenGL / WebGL Rendering</h3>
+                <p>
+                    High-performance 2D rendering with custom shaders, multiple windows, and fast WebAssembly builds.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="assets/physics_icon.png" alt="Physics Icon" />
+                <h3>Box2D Physics</h3>
+                <p>
+                    Stable, deterministic physics simulation integrated directly into Entities and the node system.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="assets/spine_icon.png" alt="Spine Icon" />
+                <h3>Spine® Animation Support</h3>
+                <p>
+                    Import Spine skeletons into HyEditor, configure animation states, and blend/mix at runtime.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="assets/cmake_icon.png" alt="CMake Icon" />
+                <h3>CMake Project Automation</h3>
+                <p>
+                    HyEditor manages all CMake generation, source files, dependencies, and multi-platform builds.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="assets/emscripten_icon.png" alt="Web Icon" />
+                <h3>WebAssembly Export</h3>
+                <p>
+                    Build your game for the browser using Emscripten — no extra setup required.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="assets/data_icon.png" alt="Pipeline Icon" />
+                <h3>Asset Pipeline</h3>
+                <p>
+                    Atlases, sub-atlases, bitmap fonts, audio banks, tilesets, Spine images — deeply optimized.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="assets/code_icon.png" alt="Code Icon" />
+                <h3>Programmer-First Design</h3>
+                <p>
+                    A clean C++ API with Nodes, Entities, animation floats, physics shapes, UI widgets, and more.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        © 2012–2025 HyEngine · Open source on GitHub · Created by GameOverture
+    </footer>
+
+</body>
+</html>

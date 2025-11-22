@@ -2,37 +2,32 @@ site_name: HyEngine Documentation
 site_url: https://hyengine.org/docs/
 site_dir: ../docs
 nav:
-  - Home: index.md
   - Getting Started:
-      - Installation & Setup: install.md
-      - First Project: first_project.md
-      - Project Structure Overview: overview.md
+      - Installation & Setup: getting-started/install.md
+      - First Project: getting-started/first_project.md
+      - Programming Quickstart: getting-started/programming_quickstart.md
   - Editor Manual:
-      - Projects: editor/projects.md
-      - Asset Manager:
-          - Atlases: editor/atlas_manager.md
-          - TileSet: editor/tilesets.md
+      - Overview: editor/overview.md
+      - Project Explorer: editor/project_explorer.md
+      - Asset Manager: editor/asset_manager.md
+      - TileSets: editor/tilesets.md
       - Project Items:
           - Sprites: editor/sprites.md
           - Tile Map: editor/tilemap.md
           - Text: editor/text.md
+          - Particles: editor/particles.md
           - Spine: editor/spine.md
           - Audio: editor/audio.md
           - Entity: editor/entity.md
-      - Language & Coding Style: fundamentals/language.md
-      - Architecture: fundamentals/architecture.md
-      - Data Flow & Game Loop: fundamentals/dataflow.md
-  - Engine Systems:
-      - Engine Overview: engine/overview.md
-      - Components: engine/components.md
-      - Systems: engine/systems.md
-      - Render & Update Pipelines: engine/pipelines.md
-      - Assets & Resource Management: engine/assets.md
-  - API Reference:
-      - Core API: api/core.md
-      - Graphics API: api/graphics.md
-      - Physics API: api/physics.md
-      - Input API: api/input.md
-      - UI / Editor Integration: api/ui.md
-  - HyExamples:
-      - Examples Index: examples/index.md
+  - Engine Manual:
+      - Overview: engine/overview.md
+      - Coding Style: engine/code_style.md
+      - Game Loop: engine/game_loop.md
+      - Scene Nodes: engine/scene_nodes.md
+      - Windows & Cameras: engine/windows_cameras.md
+      - User Interface: engine/user_interface.md
+  - Example Projects:
+      - Audio: examples/audio.md
+      - Multiwindow: examples/multiwindow.md
+      - Text: examples/text.md
+      - Spine: examples/spine.md

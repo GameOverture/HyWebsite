@@ -1,141 +1,91 @@
-# HyEngine Documentation
-
-Welcome to the official documentation for **HyEngine** — a fully-featured, cross-platform 2D game engine and editor designed for developers who want **total control** over their game code while still benefiting from a powerful WYSIWYG editor for asset management, animation workflows, entities, UI, and build automation.
-
-HyEngine is built for **programmer-focused game development**, combining:
-- A robust C++ runtime engine (HyEngine)
-- A powerful GUI editor and asset pipeline (HyEditor)
-- A fully automated CMake-based build system
-- Optional WebAssembly targets via Emscripten
-
+---
+hide:
+    - navigation
+    - toc
 ---
 
-## 🚀 What is HyEngine?
+Project documentation with&nbsp;Markdown.
 
-HyEngine is a modern, scalable 2D engine designed for studios or solo developers who want:
+MkDocs is a **fast**, **simple** and **downright gorgeous** static site
+generator that's geared towards building project documentation. Documentation
+source files are written in Markdown, and configured with a single YAML
+configuration file. Start by reading the [introductory tutorial], then check the
+[User Guide] for more information.
 
-- **Direct control over code** — no “black box” systems  
-- **A true offline asset pipeline** — Atlases, fonts, audio cues, tilesets  
-- **Editor-built Entities** that auto-generate clean C++ classes  
-- **Deterministic simulation**, physics through Box2D  
-- **Custom rendering pipelines** with OpenGL/WebGL  
-- **Cross-platform builds** managed by CMake under the hood  
-- **Instant iteration** by regenerating assets and project files in HyEditor
+[introductory tutorial]: getting-started.md
+[User Guide]: user-guide/README.md
 
-HyEditor and HyEngine work together to handle the annoying parts:
-- Importing and organizing assets  
-- Creating atlases and sub-atlases  
-- Managing C++ source files  
-- Visual layout and animation timelines  
-- Generating Entity classes  
-- Handling Spine animation data  
-- Managing builds for Windows / Linux / Web  
+<div class="text-center">
+<a href="getting-started/" class="btn btn-primary" role="button">Getting Started</a>
+<a href="user-guide/" class="btn btn-primary" role="button">User Guide</a>
+</div>
 
-Leaving you free to write actual gameplay code.
+<div class="pt-2 pb-4 px-4 my-4 bg-body-tertiary rounded-3">
+<h2 class="display-4 text-center">Features</h2>
 
----
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card mb-4">
+      <div class="card-body">
+        <h3 class="card-title">Great themes available</h3>
+        <p class="card-text">
+            There's a stack of good looking <a href="user-guide/choosing-your-theme">themes</a> available for MkDocs.
+            Choose between the built in themes:
+            <a href="user-guide/choosing-your-theme/#mkdocs">mkdocs</a> and
+            <a href="user-guide/choosing-your-theme/#readthedocs">readthedocs</a>,
+            select one of the third-party themes
+            (on the <a href="https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes">MkDocs Themes</a> wiki page
+            as well as the <a href="https://github.com/mkdocs/catalog#-theming">MkDocs Catalog</a>),
+            or <a href="dev-guide/themes/">build your own</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card mb-4">
+      <div class="card-body">
+        <h3 class="card-title">Easy to customize</h3>
+        <p class="card-text">
+            Get your project documentation looking just the way you want it by
+            <a href="user-guide/customizing-your-theme/">customizing your
+            theme</a> and/or installing some <a
+            href="user-guide/configuration/#plugins">plugins</a>. Modify
+            Markdown's behavior with <a
+            href="user-guide/configuration/#markdown_extensions">Markdown
+            extensions</a>. Many <a
+            href="user-guide/configuration/">configuration options</a> are
+            available.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-## 📚 Documentation Sections
-
-### ▶️ **Getting Started**
-Learn how to install HyEditor, configure your environment, and compile the Engine.
-
-- [Installation](installation.md)
-- [Directory Structure](structure.md)
-- [Creating Your First Project](getting-started.md)
-
----
-
-### 🧩 **Fundamentals**
-Understand the core concepts behind the engine and editor.
-
-- Asset Pipeline  
-- Project Items (Sprites, TileMaps, Text, Spine, Particles, Audio, Entities)  
-- States  
-- Nodes  
-- Animation Floats  
-- Entities & physics shapes  
-- Meta vs Data  
-
-Start here if you're new to the workflow.
-
----
-
-### ⚙️ **Engine Programming**
-Everything related to writing C++ gameplay code:
-
-- Nodes and scene management  
-- Entities and composition  
-- Physics & shapes  
-- Rendering and custom shaders  
-- Input  
-- Time systems  
-- UI widgets & UI containers  
-- Loading Editor-generated content  
-- Hot-loading raw assets  
-
----
-
-### 📖 **API Reference**
-Organized by system:
-
-- Core utilities  
-- Graphics  
-- Physics (Box2D integration)  
-- Input  
-- Audio  
-- UI system  
-- Math / RNG / JSON helpers  
-
----
-
-### 🧪 **HyExamples**
-Official example projects demonstrating:
-
-- Basic rendering and scene graphs  
-- Sprites and animations  
-- TileMap usage  
-- Loading Spine skeletons  
-- Using Entities in code  
-- UI examples  
-- Physics examples  
-- WebAssembly builds  
-
-Browse the examples:  
-**[HyExamples →](examples/index.md)**
-
----
-
-## 🛠 Technologies
-
-**Engine:**  
-OpenGL, SDL2/GLFW, Box2D, glad, glm, stb, JSON (nlohmann or rapidjson)
-
-**Editor:**  
-Qt6, freetype2, freetype-gl, libogg/vorbis
-
-**Build System:**  
-CMake, Emscripten, MSVC, Clang, GCC
-
----
-
-## ✨ Why HyEngine?
-
-HyEngine focuses on three goals:
-
-1. **Full control at the code level**  
-2. **A powerful editor that handles the tedious parts**  
-3. **A clean, deterministic, production-ready pipeline**
-
-Whether you're building a cinematic platformer, a simulation-heavy title, or a VFX-intense 2D game, HyEngine provides the tools without locking you into a specific workflow.
-
----
-
-## 📎 Next Steps
-
-→ **[Install HyEngine](installation.md)**  
-→ **[Learn the fundamentals](fundamentals/overview.md)**  
-→ **[Build your first Entity](engine/entities.md)**  
-
-Let’s build something amazing.
-
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Preview your site as you work</h3>
+        <p class="card-text">
+            The built-in dev-server allows you to preview your documentation
+            as you're writing it. It will even auto-reload and refresh your
+            browser whenever you save your changes.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Host anywhere</h3>
+        <p class="card-text">
+            MkDocs builds completely static HTML sites that you can host on
+            GitHub Pages, Amazon S3, or <a
+            href="user-guide/deploying-your-docs/">anywhere</a> else you
+            choose.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -33,7 +33,7 @@ theme:
     previous: 65 # a
     search: 83   # s
     next: 68     # d
-  logo: img/logo.png
+  logo: img/favicon.ico
   favicon: img/favicon.ico
   features:
     - navigation.tabs

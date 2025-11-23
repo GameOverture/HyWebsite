@@ -3,7 +3,7 @@ title: "Editor Manual"
 ---
 
 <figure>
-  <img src="/docs/img/editor_overview.png" alt="HyEditor interface overview">
+  <img src="../img/editor_overview.png" alt="HyEditor interface overview">
   <figcaption>HyEditor's default window layout.</figcaption>
 </figure>
 
@@ -34,7 +34,7 @@ The Auxiliary window is contextually used when needed. By default it'll display 
 ## ▶️Editor Flow
 
 <figure>
-  <img src="/docs/img/editor_flow.png" alt="HyEditor work flow">
+  <img src="../img/editor_flow.png" alt="HyEditor work flow">
   <figcaption>Shows how each section of HyEditor works together.</figcaption>
 </figure>
 

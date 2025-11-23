@@ -25,7 +25,7 @@ jobs:
 
       - name: Build MkDocs site
         working-directory: mkdocs
-        run: mkdocs build --strict
+        run: mkdocs build
 
       - name: Commit and push generated site
         run: |

@@ -57,8 +57,8 @@ jobs:
 
       - name: Copy root site files
         run: |
-          cp ../index.html public/
-          cp ../CNAME public/ || true
+          cp ${GITHUB_WORKSPACE}/index.html public/
+          cp ${GITHUB_WORKSPACE}/CNAME public/ || true
 
       - name: Deploy to GitHub Pages
         id: deployment

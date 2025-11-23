@@ -36,7 +36,7 @@ theme:
   favicon: img/favicon.ico
   features:
     - navigation.tabs
-    - navigation.sections
+    #- navigation.sections
     - navigation.indexes
     - navigation.footer
     - navigation.path
@@ -54,7 +54,6 @@ extra:
       name: Harmony Engine's GitHub
 
 nav:
-  - index.md
   - Getting Started:
       - getting-started/index.md
       - Installation & Setup: getting-started/install.md

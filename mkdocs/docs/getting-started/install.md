@@ -91,9 +91,38 @@ In the next dialog, choose which IDE to generate in first combo box (Visual Stud
 
 > If using Visual Studio, installing *Qt Visual Studio Tools* extension is recommended for Qt-aware debugging and UI file navigation
 
-## ▶️First time launch of Editor
-(explain the initial setup when running the editor for the first time)
+## ▶️Running the Editor for the First Time
 
-Show the registry entry it makes and how to uninstall everything
+Whenever HyEditor launches, it checks whether it can find where the Harmony Engine project is located. 
+
+<figure>
+  <img src="/docs/img/first_run_00.png" alt="First time run dialog">
+  <figcaption>If it's the first time running HyEditor, or it can't find Harmony project location.</figcaption>
+</figure>
+
+In the next dialog, browse to the location of the Harmony Engine project. You should be looking for the root directory of the Git repository. When you find a valid location, the red error bar will disappear and can you press OK. The folder contents will look something like this:
+
+<figure>
+  <img src="/docs/img/first_run_01.png" alt="Choose Harmony engine project location directory">
+  <figcaption>Example of a valid Harmony Engine project location.</figcaption>
+</figure>
+
+When you continue, HyEditor will remember this location, and various other editor preferences in the following location:
+
+**WINDOWS** uses the registry: `\HKEY_CURRENT_USER\SOFTWARE\Harmony Engine`
+
+**LINUX** stores in: `~/.config/Harmony Engine/`
+
+> If you ever want to change the Harmony Project location, first close HyEditor. You can delete the old location then reopen HyEditor, or keep the old location and point to a new location by doing **Tools** -> **Change Harmony Location**
+
+## ▶️Uninstalling Harmony Engine
+
+- Remove the editor preferences setting at:
+
+**WINDOWS** uses the registry: `\HKEY_CURRENT_USER\SOFTWARE\Harmony Engine`
+
+**LINUX** stores in: `~/.config/Harmony Engine/`
+
+- Then simply delete the Harmony repository directory and any HyEditor pre-built release you downloaded.
 
 

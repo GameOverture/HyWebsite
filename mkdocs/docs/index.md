@@ -85,7 +85,7 @@ Welcome to the official documentation for <strong>HyEngine</strong>!
       Understand how Harmony’s runtime API and how it works under the hood. Scene nodes, windows, cameras, input, rendering, the game loop and more.
     </p>
 	<div class="center-buttons">
-	  <a href="editor/">Engine Manual</a>
+	  <a href="engine/">Engine Manual</a>
 	</div>
   </div>
 
@@ -95,7 +95,7 @@ Welcome to the official documentation for <strong>HyEngine</strong>!
       Browse a collection of sample projects demonstrating major features how they work in practice. Each example illustrates practical usage patterns.
     </p>
 	<div class="center-buttons">
-	  <a href="editor/">Example Projects</a>
+	  <a href="examples/">Example Projects</a>
 	</div>
   </div>
 

@@ -5,6 +5,7 @@ hide: toc
 
 **Harmony Engine** is particularly well-suited for developers who:
 
+- Want to use a completely free and open-source game engine (MIT)
 - Are building any game in the 2d genre
 - Want a code-first workflow without the overhead of large general-purpose engines. 
 - Need builds that are performant, lightweight, and cross-platform (including the web browser with optional WebAssembly deployment)

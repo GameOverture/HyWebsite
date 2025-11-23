@@ -54,7 +54,7 @@ extra:
       name: Harmony Engine's GitHub
 
 nav:
-  - Home: index.md
+  - index.md
   - Getting Started:
       - getting-started/index.md
       - Installation & Setup: getting-started/install.md

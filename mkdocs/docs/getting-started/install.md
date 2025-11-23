@@ -96,14 +96,14 @@ In the next dialog, choose which IDE to generate in first combo box (Visual Stud
 Whenever HyEditor launches, it checks whether it can find where the Harmony Engine project is located. 
 
 <figure>
-  <img src="../img/first_run_00.png" alt="First time run dialog">
+  <img src="/docs/img/first_run_00.png" alt="First time run dialog">
   <figcaption>If it's the first time running HyEditor, or it can't find Harmony project location.</figcaption>
 </figure>
 
 In the next dialog, browse to the location of the Harmony Engine project. You should be looking for the root directory of the Git repository. When you find a valid location, the red error bar will disappear and can you press OK. The folder contents will look something like this:
 
 <figure>
-  <img src="../img/first_run_01.png" alt="Choose Harmony engine project location directory">
+  <img src="/docs/img/first_run_01.png" alt="Choose Harmony engine project location directory">
   <figcaption>Example of a valid Harmony Engine project location.</figcaption>
 </figure>
 

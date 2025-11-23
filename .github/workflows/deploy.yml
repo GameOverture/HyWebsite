@@ -30,6 +30,12 @@ jobs:
         run: |
           cd mkdocs
           mkdocs build --strict
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: mkdocs/site
+          name: github-pages 
           
   deploy:
     needs: build

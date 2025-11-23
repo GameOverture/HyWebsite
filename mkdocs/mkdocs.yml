@@ -54,6 +54,7 @@ extra:
       name: Harmony Engine's GitHub
 
 nav:
+  - Home: index.md
   - Getting Started:
       - getting-started/index.md
       - Installation & Setup: getting-started/install.md
@@ -80,6 +81,7 @@ nav:
       - Windows & Cameras: engine/windows_cameras.md
       - User Interface: engine/user_interface.md
   - Example Projects:
+      - examples/index.md
       - Audio: examples/audio.md
       - Multiwindow: examples/multiwindow.md
       - Text: examples/text.md

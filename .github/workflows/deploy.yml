@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -31,17 +31,38 @@ jobs:
           mkdocs build --strict
 
       - name: Upload built site artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
+          name: mkdocs-site
           path: mkdocs/site
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
+
     steps:
+      - name: Download built site artifact
+        uses: actions/download-artifact@v6
+        with:
+          name: mkdocs-site
+          path: site
+
+      - name: Move site into /docs subfolder
+        run: |
+          mkdir -p public/docs
+          cp -r site/* public/docs/
+
+      - name: Copy root site files
+        run: |
+          cp index.html public/
+          cp CNAME public/ || true
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          branch: gh-pages
+          folder: public

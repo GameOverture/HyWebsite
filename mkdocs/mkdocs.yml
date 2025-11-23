@@ -2,7 +2,7 @@ site_name: Harmony Engine Documentation
 site_url: https://hyengine.org/docs/
 use_directory_urls: true
 docs_dir: docs
-site_dir: ../docs
+#site_dir: ../docs
 
 theme:
   name: material

@@ -3,7 +3,7 @@ title: "Editor Manual"
 ---
 
 <figure>
-  <img src="docs/img/editor_overview.png" alt="HyEditor interface overview">
+  <img src="/docs/img/editor_overview.png" alt="HyEditor interface overview">
   <figcaption>HyEditor's default window layout.</figcaption>
 </figure>
 

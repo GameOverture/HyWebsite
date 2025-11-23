@@ -1,91 +1,102 @@
 ---
-hide:
-    - navigation
-    - toc
+title: " "
+hide: title
 ---
 
-Project documentation with&nbsp;Markdown.
+<style>
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
 
-MkDocs is a **fast**, **simple** and **downright gorgeous** static site
-generator that's geared towards building project documentation. Documentation
-source files are written in Markdown, and configured with a single YAML
-configuration file. Start by reading the [introductory tutorial], then check the
-[User Guide] for more information.
+.feature-card {
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  background: var(--md-code-bg-color);
+  box-shadow: var(--md-shadow-z1);
+}
 
-[introductory tutorial]: getting-started.md
-[User Guide]: user-guide/README.md
+.feature-card h3 {
+  margin-top: 0;
+  text-align: center;
+}
 
-<div class="text-center">
-<a href="getting-started/" class="btn btn-primary" role="button">Getting Started</a>
-<a href="user-guide/" class="btn btn-primary" role="button">User Guide</a>
-</div>
+.feature-card p {
+  font-size: 0.65rem;
+  line-height: 1.35rem;
+  margin-bottom: 0.8rem; /* Reduce space below paragraph */
+}
 
-<div class="pt-2 pb-4 px-4 my-4 bg-body-tertiary rounded-3">
-<h2 class="display-4 text-center">Features</h2>
+.center-buttons {
+  text-align: center;
+  margin: 0.8rem 0 0.2rem 0; /* Reduced vertical spacing */
+}
 
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card mb-4">
-      <div class="card-body">
-        <h3 class="card-title">Great themes available</h3>
-        <p class="card-text">
-            There's a stack of good looking <a href="user-guide/choosing-your-theme">themes</a> available for MkDocs.
-            Choose between the built in themes:
-            <a href="user-guide/choosing-your-theme/#mkdocs">mkdocs</a> and
-            <a href="user-guide/choosing-your-theme/#readthedocs">readthedocs</a>,
-            select one of the third-party themes
-            (on the <a href="https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes">MkDocs Themes</a> wiki page
-            as well as the <a href="https://github.com/mkdocs/catalog#-theming">MkDocs Catalog</a>),
-            or <a href="dev-guide/themes/">build your own</a>.
-        </p>
-      </div>
-    </div>
+.center-buttons a {
+  display: inline-block;
+  margin: 0 0.4rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--md-primary-fg-color);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.center-buttons a:hover {
+  background: var(--md-primary-fg-color--light);
+}
+
+.center { text-align: center; }
+</style>
+
+<p class="center">
+Welcome to the official documentation for <strong>HyEngine</strong>!
+</p>
+
+<div class="features-grid">
+
+  <div class="feature-card">
+    <h3>New to Harmony?</h3>
+    <p class="center">
+      Provides step-by-step instructions for installing Harmony Engine and creating your first functional project. Jump in and learn the essentials.
+    </p>
+	<div class="center-buttons">
+	  <a href="getting-started/">Getting Started</a>
+	</div>
   </div>
-  <div class="col-sm-6">
-    <div class="card mb-4">
-      <div class="card-body">
-        <h3 class="card-title">Easy to customize</h3>
-        <p class="card-text">
-            Get your project documentation looking just the way you want it by
-            <a href="user-guide/customizing-your-theme/">customizing your
-            theme</a> and/or installing some <a
-            href="user-guide/configuration/#plugins">plugins</a>. Modify
-            Markdown's behavior with <a
-            href="user-guide/configuration/#markdown_extensions">Markdown
-            extensions</a>. Many <a
-            href="user-guide/configuration/">configuration options</a> are
-            available.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h3 class="card-title">Preview your site as you work</h3>
-        <p class="card-text">
-            The built-in dev-server allows you to preview your documentation
-            as you're writing it. It will even auto-reload and refresh your
-            browser whenever you save your changes.
-        </p>
-      </div>
-    </div>
+  <div class="feature-card">
+    <h3>Editor Design Tool</h3>
+    <p class="center">
+      All of Harmony's tools are wrapped into the HyEditor. From project management, asset pipelines, and scene item creation.
+    </p>
+	<div class="center-buttons">
+	  <a href="editor/">Editor Manual</a>
+	</div>
   </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h3 class="card-title">Host anywhere</h3>
-        <p class="card-text">
-            MkDocs builds completely static HTML sites that you can host on
-            GitHub Pages, Amazon S3, or <a
-            href="user-guide/deploying-your-docs/">anywhere</a> else you
-            choose.
-        </p>
-      </div>
-    </div>
+
+  <div class="feature-card">
+    <h3>Programming the Game</h3>
+    <p class="center">
+      Understand how Harmony’s runtime API and how it works under the hood. Scene nodes, windows, cameras, input, rendering, the game loop and more.
+    </p>
+	<div class="center-buttons">
+	  <a href="editor/">Engine Manual</a>
+	</div>
   </div>
-</div>
+
+  <div class="feature-card">
+    <h3>Learn with Sample Projects</h3>
+    <p class="center">
+      Browse a collection of sample projects demonstrating major features how they work in practice. Each example illustrates practical usage patterns.
+    </p>
+	<div class="center-buttons">
+	  <a href="editor/">Example Projects</a>
+	</div>
+  </div>
+
 </div>

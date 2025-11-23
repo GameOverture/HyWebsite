@@ -1,5 +1,3 @@
-# HyEngine Documentation
-
 Welcome to the official documentation for **HyEngine** — a fully-featured, cross-platform 2D game engine and editor designed for developers who want **total control** over their game code while still benefiting from a powerful WYSIWYG editor for asset management, animation workflows, entities, UI, and build automation.
 
 HyEngine is built for **programmer-focused game development**, combining:

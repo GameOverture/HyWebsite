@@ -1,13 +1,66 @@
-site_name: HyEngine Documentation
+site_name: Harmony Engine Documentation
 site_url: https://hyengine.org/docs/
 site_dir: ../docs
+
+theme:
+  name: material
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+  # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  shortcuts:
+    help: 87     # w
+    previous: 65 # a
+    search: 83   # s
+    next: 68     # d
+  logo: img/logo.png
+  favicon: img/favicon.ico
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.footer
+    - navigation.path
+
+markdown_extensions:
+  - md_in_html
+
+extra_css:
+  - stylesheets/hyengine.css
+  
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/GameOverture/HarmonyEngine
+      name: Harmony Engine's GitHub
+
 nav:
   - Getting Started:
+      - getting-started/index.md
       - Installation & Setup: getting-started/install.md
       - First Project: getting-started/first_project.md
       - Programming Quickstart: getting-started/programming_quickstart.md
   - Editor Manual:
-      - Overview: editor/overview.md
+      - editor/index.md
       - Project Explorer: editor/project_explorer.md
       - Asset Manager: editor/asset_manager.md
       - TileSets: editor/tilesets.md
@@ -20,7 +73,7 @@ nav:
           - Audio: editor/audio.md
           - Entity: editor/entity.md
   - Engine Manual:
-      - Overview: engine/overview.md
+      - engine/index.md
       - Coding Style: engine/code_style.md
       - Game Loop: engine/game_loop.md
       - Scene Nodes: engine/scene_nodes.md
@@ -31,3 +84,6 @@ nav:
       - Multiwindow: examples/multiwindow.md
       - Text: examples/text.md
       - Spine: examples/spine.md
+
+plugins:
+  - search

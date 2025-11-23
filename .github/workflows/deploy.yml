@@ -31,11 +31,11 @@ jobs:
           cd mkdocs
           mkdocs build --strict
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v5.0.0
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
         with:
           path: mkdocs/site
-          name: github-pages 
+
           
   deploy:
     needs: build

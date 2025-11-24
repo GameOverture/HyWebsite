@@ -63,11 +63,17 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
+
+      - name: Download Splash
+        uses: actions/download-artifact@v6
+        with:
+          name: splash-page
       
       - name: Download built site artifact
         uses: actions/download-artifact@v6
         with:
-          path: site
+          name: github-pages
+          path: docs
 
-      - name: Deploy GitHub Pages site
-        uses: actions/deploy-pages@v4.0.5
+      #- name: Deploy GitHub Pages site
+      #  uses: actions/deploy-pages@v4.0.5

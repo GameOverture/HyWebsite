@@ -30,6 +30,10 @@ jobs:
           cd mkdocs
           mkdocs build --clean --strict --site-dir site
 
+      - name: Clean site folder
+        run: |
+          find mkdocs/site -type l -delete
+
       - name: Upload built site artifact
         uses: actions/upload-artifact@v5
         with:

@@ -36,6 +36,14 @@ jobs:
           name: mkdocs-site
           path: mkdocs/site
 
+      - name: Upload splash page artifact
+        uses: actions/upload-artifact@v5
+        with:
+          name: splash-page
+          path: |
+            index.html
+            CNAME
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -52,20 +60,15 @@ jobs:
         with:
           name: mkdocs-site
           path: site
-
-      - name: Move site into /docs subfolder
-        run: |
-          mkdir -p public/docs
-          cp -r site/* public/docs/
-
-      - name: Copy root site files
-        run: |
-          cp index.html public/
-          cp CNAME public/ || true
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v3
+      
+      - name: Download splash page artifact
+        uses: actions/download-artifact@v5
         with:
-          branch: gh-pages
-          folder: public
+          name: splash-page
+          path: site
+
+      - name: Deploy GitHub Pages site
+        uses: actions/deploy-pages@v4.0.5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifact_name: site

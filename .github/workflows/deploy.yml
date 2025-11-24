@@ -33,7 +33,7 @@ jobs:
       - name: Prepare deployment folder
         run: |
           mkdir -p deploy
-          cp -r splash deploy/
+          cp -r splash/. deploy/
           cp -r mkdocs/site deploy/docs
 
       - name: Upload deployment artifact

@@ -28,7 +28,7 @@ jobs:
       - name: Build MkDocs site
         run: |
           cd mkdocs
-          mkdocs build --strict
+          mkdocs build --clean --strict --site-dir site
 
       - name: Upload built site artifact
         uses: actions/upload-artifact@v5

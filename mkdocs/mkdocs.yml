@@ -1,6 +1,6 @@
 site_name: Harmony Engine Documentation
 site_url: https://hyengine.org/docs/
-use_directory_urls: true
+#use_directory_urls: true
 docs_dir: docs
 #site_dir: ../docs
 
@@ -63,7 +63,7 @@ nav:
       - Programming Quickstart: getting-started/programming_quickstart.md
   - Editor Manual:
       - editor/index.md
-      - Project Explorer: editor/project_explorer.md
+      - Projects: editor/projects.md
       - Asset Manager: editor/asset_manager.md
       - TileSets: editor/tilesets.md
       - Project Items:

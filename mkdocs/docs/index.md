@@ -54,7 +54,7 @@ hide: title
 </style>
 
 <p class="center">
-Welcome to the official documentation for <strong>HyEngine</strong>!
+Welcome to the official documentation for <a href="https://hyengine.org"><strong>HyEngine</strong></a>!
 </p>
 
 <div class="features-grid">

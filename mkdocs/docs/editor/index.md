@@ -3,13 +3,13 @@ title: "Editor Manual"
 ---
 
 <figure>
-  <img src="/docs/img/editor_overview.png" alt="HyEditor interface overview">
+  <img src="../img/editor_overview.png" alt="HyEditor interface overview">
   <figcaption>HyEditor's default window layout.</figcaption>
 </figure>
 
 ### 1️⃣. Project Explorer
 
-Open **Project**'s will show up here. You may have multiple **Project**'s open and browsable at once, but only one **Project** may be 'active' at a given time. All the details are provided in the [Project Explorer](project_explorer.md) section.
+Open **Project**'s will show up here. You may have multiple **Project**'s open and browsable at once, but only one **Project** may be 'active' at a given time. All the details are provided in the [Projects](projects.md) section.
 
 ### 2️⃣. Asset Manager
 
@@ -34,7 +34,7 @@ The Auxiliary window is contextually used when needed. By default it'll display 
 ## ▶️Editor Flow
 
 <figure>
-  <img src="/docs/img/editor_flow.png" alt="HyEditor work flow">
+  <img src="../img/editor_flow.png" alt="HyEditor work flow">
   <figcaption>Shows how each section of HyEditor works together.</figcaption>
 </figure>
 

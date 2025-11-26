@@ -19,7 +19,7 @@ The editor tool (**HyEditor**) that manages projects, assets, and scenes. And th
 ## ▶️ Next Steps
 
 → **[Installation & Setup](install.md)**  
-→ **[First Project](first_project.md)**  
-→ **[Programming Quickstart](programming_quickstart.md)**  
+→ **[First Project](first-project.md)**  
+→ **[Programming Quickstart](programming-quickstart.md)**  
 
 Let’s build something neat.

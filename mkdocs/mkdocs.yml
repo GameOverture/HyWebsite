@@ -42,6 +42,7 @@ theme:
     - navigation.indexes
     - navigation.footer
     - navigation.path
+    - toc.integrate
 
 markdown_extensions:
   - md_in_html
@@ -59,28 +60,35 @@ nav:
   - Getting Started:
       - getting-started/index.md
       - Installation & Setup: getting-started/install.md
-      - First Project: getting-started/first_project.md
-      - Programming Quickstart: getting-started/programming_quickstart.md
+      - First Project: getting-started/first-project.md
+      - Programming Quickstart: getting-started/programming-quickstart.md
   - Editor Manual:
       - editor/index.md
       - Projects: editor/projects.md
-      - Asset Manager: editor/asset_manager.md
+      - Asset Manager: editor/asset-manager.md
       - TileSets: editor/tilesets.md
       - Project Items:
-          - Sprites: editor/sprites.md
-          - Tile Map: editor/tilemap.md
-          - Text: editor/text.md
-          - Particles: editor/particles.md
-          - Spine: editor/spine.md
-          - Audio: editor/audio.md
-          - Entity: editor/entity.md
-  - Engine Manual:
-      - engine/index.md
-      - Coding Style: engine/code_style.md
-      - Game Loop: engine/game_loop.md
-      - Scene Nodes: engine/scene_nodes.md
-      - Windows & Cameras: engine/windows_cameras.md
-      - User Interface: engine/user_interface.md
+          - editor/items/index.md
+          - Sprites: editor/items/sprites.md
+          - Tile Map: editor/items/tilemap.md
+          - Text: editor/items/text.md
+          - Particles: editor/items/particles.md
+          - Spine: editor/items/spine.md
+          - Audio: editor/items/audio.md
+          - Entity: editor/items/entity.md
+  - Programming Manual:
+      - programming/index.md
+      - Windows & Cameras: programming/windows-cameras.md
+      - Scene Management:
+          - programming/scene/index.md
+          - Item Nodes: programming/scene/item-nodes.md
+          - Entities: programming/scene/entities.md
+      - Input Handling: programming/input.md
+      - Audio System: programming/audio.md
+      - User Interface: programming/user-interface.md
+      - HyEngine Details:
+          - Coding Style: programming/engine/code-style.md
+          - Game Loop: programming/engine/game-loop.md
   - Example Projects:
       - examples/index.md
       - Audio: examples/audio.md

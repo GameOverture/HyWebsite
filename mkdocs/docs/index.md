@@ -1,12 +1,15 @@
 ---
 title: " "
-hide: title
+hide:
+  - title
+  - toc
+  - navigation
 ---
 
 <style>
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
   gap: 1.5rem;
   margin: 2rem 0;
 }
@@ -85,7 +88,7 @@ Welcome to the official documentation for <a href="https://hyengine.org"><strong
       Understand how Harmony’s runtime API and how it works under the hood. Scene nodes, windows, cameras, input, rendering, the game loop and more.
     </p>
 	<div class="center-buttons">
-	  <a href="engine/">Engine Manual</a>
+	  <a href="programming/">Programming Manual</a>
 	</div>
   </div>
 

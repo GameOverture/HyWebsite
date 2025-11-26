@@ -28,7 +28,7 @@ Within **Advanced** you can customize how the project folders (like the assets o
   <figcaption>Folders within <strong>Project Explorer</strong> are often referred as <em>Prefixes</em>.</figcaption>
 </figure>
 
-1. All currently open Projects ![Project Icon](../img/editor/Project.png) are shown in the tree view here. The currently active project is shown with the powered sub-icon ![Project Active Icon](../img/editor/Project-Pending.png).
+1. All currently open **Project**s ![Project Icon](../img/editor/Project.png) are shown in the tree view here. Nested beneath each **Project** are the prefix folders containing the **Project Items**. The currently active project is shown with the ![Project Active Icon](../img/editor/Project-Pending.png) sub-icon.
 2. You can drag **Project Items** between entirely different game **Projects** to copy them. This will include importing any required assets into the target project.
 3. The search box allows you to filter the visible **Project Items** in the tree view. You can also filter by item type by selecting the corresponding icon.
 
@@ -53,10 +53,11 @@ If you need certain code libraries/dependencies to be included in your build cli
 ![Library dependency widgets](../img/editor/dlg_build_settings_dependency.png)
 
 The library dependency must be a CMake compatible package. You must specify the following two fields:
+
 - **CMakeLists.txt Project Name**: The library target name used within the `add_library()` command.
 - **Library relative location**: Use the "Browse..." button to select the folder where the library's root `CMakeLists.txt` is located
 
-**Options** can be left blank, but is useful if you want to override default options or inject CMake scripting code. The options are parsed before the library is included.
+**Options** can be left blank, but is useful if you want to override default options or inject CMake scripting code. The options are parsed (and cached) before the library is included.
 
 > If you already have an existing compatible build, CMake may try to update the environment automatically when you try to compile. On occasion you may need to recreate your build after adding dependencies.
 

@@ -10,7 +10,10 @@ To create a new Project in the Project Explorer you can:
 - `File > New Project` from the menu
 - Press `Ctrl+Shift+N`
 
-![New Project Dialog](../img/editor/dlg_new_project.png)
+<figure>
+  <img src="../img/editor/dlg_new_project.png" alt="Create New Project Dialog">
+  <figcaption></figcaption>
+</figure>
 
 **Game Title** is the human readable name of your game, used on labels and titles.
 

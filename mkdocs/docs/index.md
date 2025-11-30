@@ -14,6 +14,12 @@ hide:
   margin: 2rem 0;
 }
 
+@media (max-width: 700px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .feature-card {
   border: 1px solid var(--md-default-fg-color--lighter);
   border-radius: 8px;

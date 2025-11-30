@@ -4,6 +4,8 @@ title: "Asset Manager"
 
 ## Overview
 
+The below example is for all asset types besides **Code**, which is covered below in the [Code & Build Management](#code-build-management) section.   
+
 <figure>
   <img src="../img/editor/asset-manager.png" alt="Asset Manager Dock Window">
   <figcaption>Your source code is also considered assets! Along with textures and audio. </figcaption>
@@ -39,4 +41,37 @@ title: "Asset Manager"
 
 Right-clicking an asset and selecting **Properties...** will open the **Asset Properties** dialog.
 
+## Code & Build Management
 
+When you select the **Code** tab in the **Asset Manager**, you'll see a list of your game's C++ source code files. These files are organized into **Builds**, which are configurations that determine how your code is compiled and linked.
+
+### Build Settings
+
+With the desired **Project** active, you can open the **Build Settings** in the menu `Project > Build Settings`
+
+![Build Settings Dialog](../img/editor/dlg_build_settings.png)
+
+**Output Name** is the name of the final executable file created when building your game.
+
+Below that you can choose which 3rd party vendors Harmony will use if you have a preference. The **Extras** require you to manually install them in the respective `HarmonyEngine/Engine/extras/` directory. Follow the instructions in the `README.txt` file included in each extra's folder.
+
+### Adding Additional Library Dependencies
+
+If you need certain code libraries/dependencies to be included in your build click the ![Add Button](../img/editor/generic-add.png) **Add library dependency** button.
+
+![Library dependency widgets](../img/editor/dlg_build_settings_dependency.png)
+
+The library dependency must be a CMake compatible package. You must specify the following two fields:
+
+- **CMakeLists.txt Project Name**: The library target name used within the `add_library()` command.
+- **Library relative location**: Use the "Browse..." button to select the folder where the library's root `CMakeLists.txt` is located
+
+**Options** can be left blank, but is useful if you want to override default options or inject CMake scripting code. The options are parsed (and cached) before the library is included.
+
+> If you already have an existing compatible build, CMake may try to update the environment automatically when you try to compile. On occasion you may need to recreate your build after adding dependencies.
+
+## Creating New Builds
+
+With your **Build Settings** determined, you can create a new build of your game by selecting `Project > New Build` from the menu, or by pressing `Ctrl+Shift+B`.
+
+Any existing source code is independent of your builds, so removing the **Project**'s `/build/` folder can be done freely. 

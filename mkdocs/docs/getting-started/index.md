@@ -20,6 +20,6 @@ The editor tool (**HyEditor**) that manages projects, assets, and scenes. And th
 
 → **[Installation & Setup](install.md)**  
 → **[First Project](first-project.md)**  
-→ **[Programming Quickstart](programming-quickstart.md)**  
+→ **[Programming Quickstart](programming-quickstart.md)**
 
 Let’s build something neat.

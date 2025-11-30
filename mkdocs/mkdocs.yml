@@ -2,7 +2,6 @@ site_name: Harmony Engine Documentation
 site_url: https://hyengine.org/docs/
 use_directory_urls: false
 docs_dir: docs
-#site_dir: ../docs
 
 theme:
   name: material
@@ -45,7 +44,14 @@ theme:
     - toc.integrate
 
 markdown_extensions:
-  - md_in_html
+#  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 extra_css:
   - stylesheets/hyengine.css
@@ -82,11 +88,14 @@ nav:
       - Scene Management:
           - programming/scene/index.md
           - Item Nodes: programming/scene/item-nodes.md
-          - Entities: programming/scene/entities.md
+          - Entities & Physics: programming/scene/entities.md
+          - User Interface: programming/scene/user-interface.md
       - Input Handling: programming/input.md
       - Audio System: programming/audio.md
-      - User Interface: programming/user-interface.md
-      - HyEngine Details:
+      - Diagnostics & Logging: programming/diagnostics.md
+      - Shaders: programming/shaders.md
+      - Direct Asset Loading: programming/direct-assets.md
+      - HyEngine API:
           - Coding Style: programming/engine/code-style.md
           - Game Loop: programming/engine/game-loop.md
   - Example Projects:

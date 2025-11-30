@@ -1,7 +1,8 @@
 ---
 title: "Scene Management"
-hide: toc
 ---
+
+## Pausing the Game
 
 ## Node Heirarchy
 

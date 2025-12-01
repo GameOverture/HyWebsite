@@ -1,47 +1,72 @@
----
+﻿---
 title: "Asset Manager"
 ---
 
-## Overview
-
-The below example is for all asset types besides **Code**, which is covered below in the [Code & Build Management](#code-build-management) section.   
+## 🔸Overview
 
 <figure>
   <img src="../img/editor/asset-manager.png" alt="Asset Manager Dock Window">
-  <figcaption>Your source code is also considered assets! Along with textures and audio. </figcaption>
+  <figcaption>Along with textures and audio, your source code is also considered assets! </figcaption>
 </figure>
 
-1. Each tab along the top independently manages a different type of asset:
-    - **Code:** Your C++ source code files, including auto-generated [entity](./items/entity.md) classes
-    - **Atlases:** Imported and generated image files combined into texture atlases
-    - **Audio:** Sound files, including music and sound effects
-2. Banks are used to group assets that are likely to be used together. Examples would be grouping assets by game level, or by type (e.g., UI sounds vs. gameplay sounds).
-> Code assets do not use banks. They instead make **builds**, which are entirely different and explained in the [Build Settings](#build-settings) section.
+1️⃣. Each tab along the top independently manages a different type of asset:
 
-3. Along the bottom are the tool buttons that allow you to manage your assets:
-    - ![New Filter](../img/editor/Filter-New.png): Create new filter, which is essentially a folder to organize your assets within a bank.
-    - ![Import](../img/editor/AtlasFrame.png): Import specified assets from a single directory.
-    - ![Import Dir](../img/editor/AtlasFrame-Open.png): Import all assets from a directory and its subdirectories.
-    - ![Replace](../img/editor/atlas-replaceFrame.png): Replace selected assets by selecting the same number of new assets.
-    - ![Delete](../img/editor/edit-delete.png): Delete selected assets
-> These actions do not use an undo/redo system
+- ![CodeIcon](../img/editor/code.png) **Code:** Your C++ source code files and builds.
+- ![AtlasIcon](../img/editor/atlas-file.png) **Atlases:** Imported and generated image files combined into texture atlases.
+- ![AudioIcon](../img/editor/audio-manager.png) **Audio:** Sound files, including music and sound effects.  
 
-4. The filters and assets are shown in a tree view:
-    - You can multi-select and drag 'n drop them to new locations.  
-    - Double-clicking an asset will preview it in the **Asset Inspector**, located in the Auxiliary window.  
-    - Right-clicking an asset will open a context menu with additional options, such as renaming, moving to a different bank, or setting [Asset Properties](#asset-properties).
+!!! info inline end "Code Assets"
+    Code assets do not use **Banks**. They instead make **Builds**, which are entirely different and explained in the [Build Settings](#build-settings) section.  
+2️⃣. Banks are used to group assets that are likely to be used together. Examples would be grouping assets by game level, or by type (e.g., UI sounds vs. gameplay sounds).
+
+- More information can be found in the [Banks](#banks) section
+
+3️⃣. Along the bottom are the tool buttons that allow you to manage your assets:
+=== "![CodeIcon](../img/editor/code.png) Code"
+    - ![New Class](../img/editor/Source-New.png): Add a new C++ class.
+    - ![New Filter](../img/editor/Filter-New.png): Create new filter, which is essentially a folder to organize your images within a bank.
+    - ![Import](../img/editor/Source.png): Import already existing code files from a single directory.
+    - ![Import Dir](../img/editor/Source-Open.png): Import already existing code files from a directory and its subdirectories.
+    - ![Replace](../img/editor/atlas-replaceFrame.png): Replace selected images by selecting the same number of new assets.
+    - ![Delete](../img/editor/edit-delete.png): Delete selected images
+    !!! warning
+        These actions do not use an undo/redo system
+
+=== "![AtlasIcon](../img/editor/atlas-file.png) Atlases"
+    - ![New Filter](../img/editor/Filter-New.png): Create new filter, which is essentially a folder to organize your images within a bank.
+    - ![Import](../img/editor/AtlasFrame.png): Import specified PNG image files from a single directory.
+    - ![Import Dir](../img/editor/AtlasFrame-Open.png): Import all PNG image files from a directory and its subdirectories.
+    - ![Replace](../img/editor/atlas-replaceFrame.png): Replace selected images by selecting the same number of new assets.
+    - ![Delete](../img/editor/edit-delete.png): Delete selected images
+    !!! warning
+        These actions do not use an undo/redo system
+
+=== "![AudioIcon](../img/editor/audio-manager.png) Audio"
+    - ![New Filter](../img/editor/Filter-New.png): Create new filter, which is essentially a folder to organize your sounds within a bank.
+    - ![Import](../img/editor/SoundClip.png): Import specified WAV sound files from a single directory.
+    - ![Import Dir](../img/editor/SoundClip-Open.png): Import all WAV sound files from a directory and its subdirectories.
+    - ![Replace](../img/editor/atlas-replaceFrame.png): Replace selected sound WAVs by selecting the same number of new assets.
+    - ![Delete](../img/editor/edit-delete.png): Delete selected sounds
+    !!! warning
+        These actions do not use an undo/redo system
+
+## 🔸Assets
+The assets and filters are shown in the main tree view:
+
+- You can multi-select and drag 'n drop them to new locations.  
+- Double ++left-button++ an asset will preview it in the **Asset Inspector**, located in the Auxiliary window.  
+- ++right-button++ an asset will open a context menu with additional options, such as renaming, moving to a different bank, or setting [Asset Properties](#asset-properties).
+- ++right-button++ an asset and selecting **Asset Properties** will open the **Asset Properties** dialog.
+
+
+## 🔸Banks
 
 <figure>
   <img src="../img/editor/asset-manager-context-menu.png" alt="Asset item context menu">
   <figcaption>Right-click context menu for an asset</figcaption>
 </figure>
 
-
-## Asset Properties
-
-Right-clicking an asset and selecting **Properties...** will open the **Asset Properties** dialog.
-
-## Code & Build Management
+## 🔸Code & Build Management
 
 When you select the **Code** tab in the **Asset Manager**, you'll see a list of your game's C++ source code files. These files are organized into **Builds**, which are configurations that determine how your code is compiled and linked.
 
@@ -59,7 +84,10 @@ Below that you can choose which 3rd party vendors Harmony will use if you have a
 
 If you need certain code libraries/dependencies to be included in your build click the ![Add Button](../img/editor/generic-add.png) **Add library dependency** button.
 
-![Library dependency widgets](../img/editor/dlg_build_settings_dependency.png)
+<figure>
+  <img src="../img/editor/dlg_build_settings_dependency.png" alt="Library dependency widgets">
+  <figcaption>Example of the cURL library as a dependency</figcaption>
+</figure>
 
 The library dependency must be a CMake compatible package. You must specify the following two fields:
 
@@ -68,9 +96,10 @@ The library dependency must be a CMake compatible package. You must specify the 
 
 **Options** can be left blank, but is useful if you want to override default options or inject CMake scripting code. The options are parsed (and cached) before the library is included.
 
-> If you already have an existing compatible build, CMake may try to update the environment automatically when you try to compile. On occasion you may need to recreate your build after adding dependencies.
+!!! note "After Adding Dependencies"
+    If you already have an existing build, CMake may try to update the environment automatically after you try to compile. On occasion, CMake errors out and prints `setlocal` in the output, which may be resolved by deleting and recreating the build.
 
-## Creating New Builds
+### Creating New Builds
 
 With your **Build Settings** determined, you can create a new build of your game by selecting `Project > New Build` from the menu, or by pressing `Ctrl+Shift+B`.
 

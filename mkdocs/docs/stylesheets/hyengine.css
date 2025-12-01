@@ -3,3 +3,13 @@
   --md-primary-fg-color--light: #ECB7B7;
   --md-primary-fg-color--dark:  #90030C;
 }
+
+.hyorange {
+	color: #FA5A0A;
+	transform: scale(1.85);
+}
+
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > ul > li > * {
+	font-size: 0.6rem;
+}

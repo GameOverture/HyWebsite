@@ -8,7 +8,7 @@ hide: toc
   <figcaption>How your game application works with HyEngine. All new projects are generated with this basic structure.</figcaption>
 </figure>
 
-## Global Engine Utilities
+## 🔸Global Engine Utilities
 
 The `HyEngine` base class provides public static methods to access global engine functionality and information.
 ``` cpp
@@ -45,12 +45,12 @@ static HyTextureQuadHandle CreateTexture(std::string sFilePath, HyTextureInfo te
 static HyAudioHandle CreateAudio(std::string sFilePath, bool bIsStreaming = false, int32 iInstanceLimit = 0, int32 iCategoryId = 0);
 ```
 
-## ▶️ Next Steps
+## 🔸Next Steps
 More information for the above functions and more can be found in:
 
 → **[Windows & Cameras](./windows-cameras.md)**  
 → **[Scene Management](./scene/index.md)**  
-↪ [Item Nodes](./scene/item-nodes.md) | [Entities & Physics](./scene/entities.md) | [User Interface](./scene/user-interface.md)  
+:material-arrow-right-bottom: [Item Nodes](./scene/item-nodes.md) | [Entities & Physics](./scene/entities.md) | [User Interface](./scene/user-interface.md)  
 → **[Input Handling](./input.md)**  
 → **[Audio System](./audio.md)**  
 → **[Diagnostics & Debugging](./diagnostics.md)**  

@@ -68,11 +68,13 @@ The assets and filters are shown in the main tree view:
 
 ## 🔸Code & Build Management
 
-When you select the **Code** tab in the **Asset Manager**, you'll see a list of your game's C++ source code files. These files are organized into **Builds**, which are configurations that determine how your code is compiled and linked.
+When you select the **Code** tab in the **Asset Manager**, you'll see your game's C++ source code files, including any generated Entity classes in the "\_hy\_" Entity folder. Along the top of the **Asset Manager** window, instead of Banks, you'll find **Builds**. Builds that are created are "out of source" which means keeping the generated build files separate from your game's source code files. So you are free to delete and recreate builds without affecting your source code. 
+
+< Show image of top Builds bar >
 
 ### Build Settings
 
-With the desired **Project** active, you can open the **Build Settings** in the menu `Project > Build Settings`
+Build settings are global and affect every build created for this **Project**. This is where you can select what dependencies to use with your game and the name of the output executable. With the desired **Project** active, and the **Code** tab selected in the **Asset Manager**, click the ![Build Settings Button](../img/editor/Build-Settings.png) **Build Settings** button.
 
 ![Build Settings Dialog](../img/editor/dlg_build_settings.png)
 
@@ -101,6 +103,12 @@ The library dependency must be a CMake compatible package. You must specify the 
 
 ### Creating New Builds
 
-With your **Build Settings** determined, you can create a new build of your game by selecting `Project > New Build` from the menu, or by pressing `Ctrl+Shift+B`.
+With your **Build Settings** determined, you can create a new build of your game by clicking the ![New Build Button](../img/editor/Build-New.png) **New Build** button.
 
-Any existing source code is independent of your builds, so removing the **Project**'s `/build/` folder can be done freely. 
+![New Build Dialog](../img/editor/dlg_new_build.png)
+
+Once you created a new build, it will appear in the combo box along in the "Builds" group box.
+
+- ![Open Build Button](../img/editor/Build-Open.png): Launches the IDE (or equivalent) of the selected build.
+- ![Package Build Button](../img/editor/package-x-generic.png): Packages the selected build into a distributable format
+- ![Delete Build Button](../img/editor/Build-Delete.png): Deletes the selected build and all its generated files (this does not affect your source code files).

@@ -2,7 +2,7 @@
 title: "Asset Manager"
 ---
 
-## 🔸Overview
+## Overview
 
 <figure>
   <img src="../img/editor/asset-manager.png" alt="Asset Manager Dock Window">
@@ -50,23 +50,23 @@ title: "Asset Manager"
     !!! warning
         These actions do not use an undo/redo system
 
-## 🔸Assets
+## Assets
 The assets and filters are shown in the main tree view:
 
 - You can multi-select and drag 'n drop them to new locations.  
 - Double ++left-button++ an asset will preview it in the **Asset Inspector**, located in the Auxiliary window.  
-- ++right-button++ an asset will open a context menu with additional options, such as renaming, moving to a different bank, or setting [Asset Properties](#asset-properties).
+- ++right-button++ an asset will open a context menu with additional options, such as renaming, moving to a different bank, or setting Asset Properties.
 - ++right-button++ an asset and selecting **Asset Properties** will open the **Asset Properties** dialog.
 
 
-## 🔸Banks
+## Banks
 
 <figure>
   <img src="../img/editor/asset-manager-context-menu.png" alt="Asset item context menu">
   <figcaption>Right-click context menu for an asset</figcaption>
 </figure>
 
-## 🔸Code & Build Management
+## Code & Build Management
 
 When you select the **Code** tab in the **Asset Manager**, you'll see your game's C++ source code files, including any generated Entity classes in the "\_hy\_" Entity folder. Along the top of the **Asset Manager** window, instead of Banks, you'll find **Builds**. Builds that are created are "out of source" which means keeping the generated build files separate from your game's source code files. So you are free to delete and recreate builds without affecting your source code. 
 

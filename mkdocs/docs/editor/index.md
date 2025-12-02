@@ -34,7 +34,7 @@ title: "Editor Manual"
     </tr>
 </table>
 
-## 🔸Editor Flow
+## Editor Flow
 
 <figure>
   <img src="../img/editor_flow.png" alt="HyEditor work flow">

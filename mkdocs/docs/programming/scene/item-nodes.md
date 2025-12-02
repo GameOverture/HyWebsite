@@ -10,7 +10,7 @@ The basic node types you can instantiate correspond to the different types of [P
 
 === "![Sprite](../../img/editor/Sprite.png) Sprite"
 
-=== "![Tile Map](../../img/editor/Tilemap.png) Tile Map"
+=== "![Tile Map](../../img/editor/TileMap.png) Tile Map"
 
 === "![Text](../../img/editor/Text.png) Text"
 

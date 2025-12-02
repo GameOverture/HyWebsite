@@ -6,11 +6,11 @@ Our goal here is to speedrun a simple game to cover Harmony Engine's major featu
 
 
 
-## 🔸Create the Project
+## Create the Project
 
-## 🔸Import the Assets
+## Import the Assets
 
-## 🔸Create the Project Items
+## Create the Project Items
 
-## 🔸Write the Game
+## Write the Game
 

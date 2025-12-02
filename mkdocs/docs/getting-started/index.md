@@ -17,7 +17,7 @@ The Harmony Engine consists of two main projects.
 The editor tool (**HyEditor**) that manages projects, assets, and scenes. And the engine itself (**HyEngine**) which is a static library that links into your game application.
 
 
-## 🔸Next Steps
+## Next Steps
 
 → **[Installation & Setup](install.md)**  
 → **[First Project](first-project.md)**  

@@ -2,7 +2,7 @@
 title: "Projects"
 ---
 
-## 🔸Creating a new Project
+## Creating a new Project
 
 To create a new Project in the Project Explorer you can:
 
@@ -26,7 +26,7 @@ The final **Project Location** (where all the project files will be dumped) is a
 
 Within **Advanced** you can customize how the project folders (like the assets or source code) reside and what they're named. You can even specify locations outside the **Project Location**. For each entry, press **Browse...** and choose the desired *parent* location, and the relative path from the **Project Location** will be filled in. Finally enter the name of the directory itself.
 
-## 🔸Project Explorer
+## Project Explorer
 
 <figure>
   <img src="../img/editor/project_explorer.png" alt="Project Explorer Dock Window">
@@ -41,11 +41,11 @@ Within **Advanced** you can customize how the project folders (like the assets o
 
 </div>
 
-## 🔸Project Settings
+## Project Settings
 
 Under Development - Dialog tool meant to edit the game's .hyproj file
 
-## 🔸Creating new Project Items
+## Creating new Project Items
 
 
 

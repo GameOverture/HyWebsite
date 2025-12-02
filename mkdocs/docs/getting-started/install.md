@@ -1,10 +1,6 @@
----
-title: "Installation & Setup"
----
-
 This guide explains how to install the Harmony Game Engine (HyEngine) and prepare your environment. You can optionally compile the HyEditor or download a prebuilt release. All steps assume a Windows or Linux development environment.
 
-## 🔸Prerequites
+## Prerequites
 Before cloning Harmony Engine or building the editor, ensure the following tools are installed:
 
 ### C++ Toolchain (IDE)
@@ -27,7 +23,7 @@ Harmony Engine uses CMake internally to configure and generate all build files f
 1. Download CMake: [https://cmake.org/download/](https://cmake.org/download/)
 2. Ensure you select "Add CMake to system PATH" during installation
 
-## 🔸Clone Git repository
+## Clone Git repository
 
 Clone the Harmony Engine repository and initialize submodules:
 ```
@@ -38,7 +34,7 @@ git submodule update --init --recursive
 Editor and Engine submodules are found in their respective 'vendor' directories.
 > Important: Submodules must be initialized or the editor and engine will not build correctly.
 
-## 🔸Get the Editor
+## Get the Editor
 You can either:
 
 - Download a pre-built Release, or
@@ -91,7 +87,7 @@ In the next dialog, choose which IDE to generate in first combo box (Visual Stud
 
 > If using Visual Studio, installing *Qt Visual Studio Tools* extension is recommended for Qt-aware debugging and UI file navigation
 
-## 🔸Running the Editor for the First Time
+## Running the Editor for the First Time
 
 Whenever HyEditor launches, it checks whether it can find where the Harmony Engine project is located. 
 
@@ -115,7 +111,7 @@ When you continue, HyEditor will remember this location, and various other edito
 
 > If you ever want to change the Harmony Project location, first close HyEditor. You can delete the old location then reopen HyEditor, or keep the old location and point to a new location by doing **Tools** -> **Change Harmony Location**
 
-## 🔸Uninstalling Harmony Engine
+## Uninstalling Harmony Engine
 
 - Remove the editor preferences setting at:
 

@@ -1,4 +1,4 @@
-site_name: Harmony Engine Documentation
+﻿site_name: Harmony Engine Documentation
 site_url: https://hyengine.org/docs/
 use_directory_urls: false
 docs_dir: docs
@@ -72,47 +72,48 @@ extra:
       name: Harmony Engine's GitHub
 
 nav:
+  - index.md
   - Getting Started:
       - getting-started/index.md
-      - Installation & Setup: getting-started/install.md
-      - First Project: getting-started/first-project.md
-      - Programming Quickstart: getting-started/programming-quickstart.md
+      - 🔶Installation & Setup: getting-started/install.md
+      - 🔶First Project: getting-started/first-project.md
+      - 🔶Programming Quickstart: getting-started/programming-quickstart.md
   - Editor Manual:
       - editor/index.md
-      - Projects: editor/projects.md
-      - Asset Manager: editor/asset-manager.md
-      - TileSets: editor/tilesets.md
+      - 🔶Projects: editor/projects.md
+      - 🔶Asset Manager: editor/asset-manager.md
+      - 🔶TileSets: editor/tilesets.md
       - Project Items:
           - editor/items/index.md
-          - Sprites: editor/items/sprites.md
-          - Tile Map: editor/items/tilemap.md
-          - Text: editor/items/text.md
-          - Particles: editor/items/particles.md
-          - Spine: editor/items/spine.md
-          - Audio: editor/items/audio.md
-          - Entity: editor/items/entity.md
+          - 🔸Sprites: editor/items/sprites.md
+          - 🔸Tile Map: editor/items/tilemap.md
+          - 🔸Text: editor/items/text.md
+          - 🔸Particles: editor/items/particles.md
+          - 🔸Spine: editor/items/spine.md
+          - 🔸Audio: editor/items/audio.md
+          - 🔸Entity: editor/items/entity.md
   - Programming Manual:
       - programming/index.md
-      - Windows & Cameras: programming/windows-cameras.md
-      - Scene Management:
+      - 🔶Windows & Cameras: programming/windows-cameras.md
+      - 🔶Scene Management:
           - programming/scene/index.md
-          - Item Nodes: programming/scene/item-nodes.md
-          - Entities & Physics: programming/scene/entities.md
-          - User Interface: programming/scene/user-interface.md
-      - Input Handling: programming/input.md
-      - Audio System: programming/audio.md
-      - Diagnostics & Logging: programming/diagnostics.md
-      - Shaders: programming/shaders.md
-      - Direct Asset Loading: programming/direct-assets.md
+          - 🔸Item Nodes: programming/scene/item-nodes.md
+          - 🔸Entities & Physics: programming/scene/entities.md
+          - 🔸User Interface: programming/scene/user-interface.md
+      - 🔶Input Handling: programming/input.md
+      - 🔶Audio System: programming/audio.md
+      - 🔶Diagnostics & Logging: programming/diagnostics.md
+      - 🔶Shaders: programming/shaders.md
+      - 🔶Direct Asset Loading: programming/direct-assets.md
       - HyEngine API:
-          - Coding Style: programming/engine/code-style.md
-          - Game Loop: programming/engine/game-loop.md
+          - 🔸Coding Style: programming/engine/code-style.md
+          - 🔸Game Loop: programming/engine/game-loop.md
   - Example Projects:
       - examples/index.md
-      - Audio: examples/audio.md
-      - Multiwindow: examples/multiwindow.md
-      - Text: examples/text.md
-      - Spine: examples/spine.md
+      - 🔶Audio: examples/audio.md
+      - 🔶Multiwindow: examples/multiwindow.md
+      - 🔶Text: examples/text.md
+      - 🔶Spine: examples/spine.md
 
 plugins:
   - search

@@ -2,7 +2,7 @@
 title: "Windows & Cameras"
 ---
 
-## 🔸Initial Setup
+## Initial Setup
 
 Based on your [Project Settings](../editor/projects.md#project-settings), the number of windows (and their resolution) your game uses is determined.
 
@@ -18,11 +18,11 @@ This will return the `HyWindow` object for the specified window index.
 
 That's all that's needed to setup the main window and a 2D camera. You can continue to the next topic, or continue to learn more advanced window and camera features below.
 
-## 🔸Camera Viewports
+## Camera Viewports
 
 By default, a newly created camera will cover the entire viewport of the window.
 
-![Camera Viewport](../img/programming/window-camera-viewport.png)
+<!-- ![Camera Viewport](../img/programming/window-camera-viewport.png) -->
 
 Multiple cameras can be created for each window, and each camera can be set to render to a specific portion of the window. This is how you can accomplish local split-screen multiplayer views, or picture-in-picture views.
 

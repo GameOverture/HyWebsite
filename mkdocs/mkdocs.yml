@@ -42,6 +42,8 @@ theme:
     - navigation.footer
     - navigation.path
     - toc.integrate
+  icon:
+    annotation: material/arrow-right-circle
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -53,7 +55,11 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.keys
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - attr_list
@@ -82,7 +88,6 @@ nav:
       - editor/index.md
       - 🔶Projects: editor/projects.md
       - 🔶Asset Manager: editor/asset-manager.md
-      - 🔶TileSets: editor/tilesets.md
       - Project Items:
           - editor/items/index.md
           - 🔸Sprites: editor/items/sprites.md
@@ -92,6 +97,7 @@ nav:
           - 🔸Spine: editor/items/spine.md
           - 🔸Audio: editor/items/audio.md
           - 🔸Entity: editor/items/entity.md
+      - 🔶TileSets: editor/tilesets.md
   - Programming Manual:
       - programming/index.md
       - 🔶Windows & Cameras: programming/windows-cameras.md

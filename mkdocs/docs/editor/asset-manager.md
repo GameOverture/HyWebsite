@@ -54,9 +54,9 @@ title: "Asset Manager"
 The assets and filters are shown in the main tree view:
 
 - You can multi-select and drag 'n drop them to new locations.  
-- Double ++left-button++ an asset will preview it in the **Asset Inspector**, located in the Auxiliary window.  
-- ++right-button++ an asset will open a context menu with additional options, such as renaming, moving to a different bank, or setting Asset Properties.
-- ++right-button++ an asset and selecting **Asset Properties** will open the **Asset Properties** dialog.
+- Double :material-mouse-left-click:++left-button++ an asset will preview it in the **Asset Inspector**, located in the Auxiliary window.  
+- :material-mouse-right-click:++right-button++ an asset will open a context menu with additional options, such as renaming, moving to a different bank, or setting Asset Properties.
+- :material-mouse-right-click:++right-button++ an asset and selecting **Asset Properties** will open the **Asset Properties** dialog.
 
 
 ## Banks
@@ -105,7 +105,12 @@ The library dependency must be a CMake compatible package. You must specify the 
 
 With your **Build Settings** determined, you can create a new build of your game by clicking the ![New Build Button](../img/editor/Build-New.png) **New Build** button.
 
-![New Build Dialog](../img/editor/dlg_new_build.png)
+<figure>
+  <img src="../img/editor/dlg_new_build.png" alt="Create Build Dialog">
+  <figcaption></figcaption>
+</figure>
+
+**Build Name** 
 
 Once you created a new build, it will appear in the combo box along in the "Builds" group box.
 

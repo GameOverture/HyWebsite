@@ -1,7 +1,10 @@
-:root  > * {
-  --md-primary-fg-color:        #FA5A0A;
-  --md-primary-fg-color--light: #ECB7B7;
-  --md-primary-fg-color--dark:  #90030C;
+:root > * {
+	--md-primary-fg-color: #FA5A0A;
+	--md-primary-fg-color--light: #ECB7B7;
+	--md-primary-fg-color--dark: #90030C;
+	--md-annotation-icon-color: #FA5A0A;
+	--md-code-hl-comment-color: #57a64a;
+	--md-code-hl-function-color: #de8103;
 }
 
 .hyorange {
@@ -17,3 +20,4 @@
 .md-typeset .grid.cards > ul > li > * {
 	font-size: 0.6rem;
 }
+

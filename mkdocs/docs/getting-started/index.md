@@ -10,7 +10,7 @@ hide: toc
 - Want a code-first workflow without the overhead of large general-purpose engines. 
 - Need builds that are performant, lightweight, and cross-platform (including the web browser with optional WebAssembly deployment)
 
-!!! note
+!!! info "Harmony is built with and uses C++"
     Basic C++ knowledge including pointers and lambdas is recommended, but Harmony is also a great way to learn C/C++ for those wanting to learn.
 
 The Harmony Engine consists of two main projects.

@@ -1,4 +1,1 @@
-﻿---
-title: "Programming Quickstart"
----
-
+﻿

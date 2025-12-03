@@ -1,5 +1,5 @@
----
-title: "Scene Management"
+﻿---
+title: "🔶Scene Management"
 ---
 
 Programming the game logic, or implementing the "scene management" of your game is ultimately up to you. The main concepts you should be familiar with are how nodes and entities work together.

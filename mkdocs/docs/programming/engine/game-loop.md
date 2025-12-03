@@ -1,4 +1,1 @@
----
-title: "Game Loop"
----
 

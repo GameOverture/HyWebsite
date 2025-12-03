@@ -1,8 +1,4 @@
-﻿---
-title: "Windows & Cameras"
----
-
-## Initial Setup
+﻿## Initial Setup
 
 Based on your [Project Settings](../editor/projects.md#project-settings), the number of windows (and their resolution) your game uses is determined.
 

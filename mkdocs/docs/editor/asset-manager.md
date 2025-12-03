@@ -1,8 +1,4 @@
-﻿---
-title: "Asset Manager"
----
-
-## Overview
+﻿## Overview
 
 <figure>
   <img src="../img/editor/asset-manager.png" alt="Asset Manager Dock Window">

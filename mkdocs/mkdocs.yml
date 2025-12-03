@@ -9,21 +9,16 @@ theme:
     text: Roboto
     code: Roboto Mono
   palette:
-  # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme)"
+    - media: "(prefers-color-scheme)" # Palette toggle for automatic mode
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
-
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
+    - media: "(prefers-color-scheme: light)" # Palette toggle for light mode
       scheme: default 
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
+    - media: "(prefers-color-scheme: dark)" # Palette toggle for dark mode
       scheme: slate
       toggle:
         icon: material/brightness-4
@@ -36,14 +31,14 @@ theme:
   logo: img/favicon.ico
   favicon: img/favicon.ico
   features:
-    - navigation.tabs
     #- navigation.sections
+    - navigation.tabs
     - navigation.indexes
     - navigation.footer
     - navigation.path
     - toc.integrate
   icon:
-    annotation: material/arrow-right-circle
+    annotation: material/plus-circle
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -77,6 +72,9 @@ extra:
       link: https://github.com/GameOverture/HarmonyEngine
       name: Harmony Engine's GitHub
 
+plugins:
+  - search
+
 nav:
   - index.md
   - Getting Started:
@@ -88,11 +86,11 @@ nav:
       - editor/index.md
       - 🔶Projects: editor/projects.md
       - 🔶Asset Manager: editor/asset-manager.md
-      - Project Items:
+      - 🔶Project Items:
           - editor/items/index.md
           - 🔸Sprites: editor/items/sprites.md
-          - 🔸Tile Map: editor/items/tilemap.md
           - 🔸Text: editor/items/text.md
+          - 🔸Tile Map: editor/items/tilemap.md
           - 🔸Particles: editor/items/particles.md
           - 🔸Spine: editor/items/spine.md
           - 🔸Audio: editor/items/audio.md
@@ -111,7 +109,7 @@ nav:
       - 🔶Diagnostics & Logging: programming/diagnostics.md
       - 🔶Shaders: programming/shaders.md
       - 🔶Direct Asset Loading: programming/direct-assets.md
-      - HyEngine API:
+      - 📚HyEngine API:
           - 🔸Coding Style: programming/engine/code-style.md
           - 🔸Game Loop: programming/engine/game-loop.md
   - Example Projects:
@@ -120,6 +118,3 @@ nav:
       - 🔶Multiwindow: examples/multiwindow.md
       - 🔶Text: examples/text.md
       - 🔶Spine: examples/spine.md
-
-plugins:
-  - search

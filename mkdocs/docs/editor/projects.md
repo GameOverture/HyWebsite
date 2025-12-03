@@ -1,8 +1,4 @@
-﻿---
-title: "Projects"
----
-
-## Creating a new Project
+﻿## Creating a new Project
 
 To create a new Project in the Project Explorer you can:
 

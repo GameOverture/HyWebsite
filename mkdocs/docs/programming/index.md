@@ -54,7 +54,7 @@ Simple programs might only need to declare a few scene nodes and can implement a
 </div>
 
 !!! note annotate
-    The member variables declared in your main game class encapsulate the flow or main components of the program. These are usually custom classes derived from `HyEntity2d` (1).
+    The member variables declared in your main game class encapsulate the flow or main components of the program. These are usually custom classes derived from `HyEntity2d`. (1)
 
 1. `HyEntity2d` is a special scene node that can contain other scene nodes like sprites, text, and audio. It also serves as a way to logically group and update objects within the game world.  
 ``` mermaid
@@ -85,52 +85,97 @@ classDiagram
     }
 ```
 
-## Global Engine Utilities
+## Engine Utilities
 
-The `HyEngine` base class provides public static methods to access global engine functionality and information.
+The `HyEngine` class (1) provides public static methods to easily access engine functionality and information.
+{ .annotate }
+
+1.  `HyEngine` public static methods:
 ``` cpp
-// Above setup
-static bool IsInitialized();
-static const HarmonyInit &InitValues();
-static std::string DateTime();
+class HyEngine
+{
+    static HyEngine * sm_pInstance;
+    ...
 
-// Windows & Cameras
-static uint32 NumWindows();
-static HyWindow &Window(uint32 uiWindowIndex = 0);
-
-// Scene Management
-static float DeltaTime();
-static double DeltaTimeD();
-static void LoadingStatus(uint32 &uiNumQueuedOut, uint32&uiTotalOut);
-static void PauseGame(bool bPause);
-
-// Input Handling
-static HyInput &Input();
-
-// Audio System
-static HyAudioCore &Audio();
-
-// Diagnostics & Debugging
-static HyDiagnostics &Diagnostics();
-
-// Shaders
-static HyShaderHandle DefaultShaderHandle(HyType eType);
-
-// Direct Asset Loading
-static std::string DataDir();
-static HyTextureQuadHandle CreateTexture(std::string sFilePath, HyTextureInfo textureInfo);
-static HyAudioHandle CreateAudio(std::string sFilePath, bool bIsStreaming = false, int32 iInstanceLimit = 0, int32 iCategoryId = 0);
+public:
+    HyEngine(const HyInit &initStruct);
+    ~HyEngine();
+    ...
+    static bool IsInitialized();
+    static const HyInit &InitValues();
+    static std::string DateTime();
+    static uint32 NumWindows();
+    static HyWindow &Window(uint32 uiWindowIndex = 0);
+    static float DeltaTime();
+    static double DeltaTimeD();
+    static void LoadingStatus(uint32 &uiNumQueuedOut, uint32 &uiTotalOut);
+    static void PauseGame(bool bPause);
+    static HyInput &Input();
+    static HyAudioCore &Audio();
+    static HyDiagnostics &Diagnostics();
+    static HyShaderHandle DefaultShaderHandle(HyType eType);
+    static std::string DataDir();
+    static HyTextureQuadHandle CreateTexture(std::string sFilePath, HyTextureInfo textureInfo);
+    static HyAudioHandle CreateAudio(std::string sFilePath, bool bIsStreaming = false, int32 iInstanceLimit = 0, int32 iCategoryId = 0);
+};
 ```
 
-## Next Steps
-More information for the above functions and more can be found in:
+<div class="grid cards" markdown>
 
-→ **[Windows & Cameras](./windows-cameras.md)**  
-→ **[Scene Management](./scene/index.md)**  
-:material-arrow-right-bottom: [Item Nodes](./scene/item-nodes.md) | [Entities & Physics](./scene/entities.md) | [User Interface](./scene/user-interface.md)  
-→ **[Input Handling](./input.md)**  
-→ **[Audio System](./audio.md)**  
-→ **[Diagnostics & Debugging](./diagnostics.md)**  
-→ **[Shaders](./shaders.md)**  
-→ **[Direct Asset Loading](./direct-assets.md)**  
+-   [:fontawesome-solid-video-camera:{.hyindicator}ㅤ**Windows & Cameras**](./windows-cameras.md)  
+    How to manage your camera viewports and render windows.
+    ``` cpp
+    // Windows & Cameras
+    static uint32 NumWindows();
+    static HyWindow &Window(uint32 uiWindowIndex = 0);
+    ```
+
+-   [:material-graph-outline:{.hyindicator}ㅤ**Scene Management**](./scene/index.md)  
+    Where you make the game. [Item Nodes](./scene/item-nodes.md) | [Entities & Physics](./scene/entities.md) | [User Interface](./scene/user-interface.md)
+    ``` cpp
+    // Scene Management
+    static float DeltaTime();
+    static double DeltaTimeD();
+    static void LoadingStatus(uint32 &uiNumQueuedOut, uint32&uiTotalOut);
+    static void PauseGame(bool bPause);
+    ```
+
+-   [:material-controller:{.hyindicator}ㅤ**Input Handling**](./input.md)  
+    Utilize Input Maps and get player input from various devices.
+    ``` cpp
+    // Input Handling
+    static HyInput &Input();
+    ```
+
+-   [:material-volume-high:{.hyindicator}ㅤ**Audio System**](./audio.md)  
+    Manage how `HyAudio2d` audio cues are played back, categories, and settings.
+    ``` cpp
+    // Audio System
+    static HyAudioCore &Audio();
+    ```
+
+-   [:material-bug-outline:{.hyindicator}ㅤ**Diagnostics & Debugging**](./diagnostics.md)  
+    
+    ``` cpp
+    // Diagnostics & Debugging
+    static HyDiagnostics &Diagnostics();
+    ```
+
+-   [:material-shape-outline:{.hyindicator}ㅤ**Shaders**](./shaders.md)  
+    
+    ``` cpp
+    // Shaders
+    static HyShaderHandle DefaultShaderHandle(HyType eType);
+    ```
+
+-   [:material-database-outline:{.hyindicator}ㅤ**Direct Asset Loading**](./direct-assets.md)  
+    
+    ``` cpp
+    // Direct Asset Loading
+    static std::string DataDir();
+    static HyTextureQuadHandle CreateTexture(std::string sFilePath, HyTextureInfo textureInfo);
+    static HyAudioHandle CreateAudio(std::string sFilePath, bool bIsStreaming = false, int32 iInstanceLimit = 0, int32 iCategoryId = 0);
+    ```
+
+</div>
 

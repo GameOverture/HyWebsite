@@ -1,7 +1,3 @@
----
-title: "Item Nodes"
----
-
 ## Node Hierarchy
 
 ## Basic Node Types

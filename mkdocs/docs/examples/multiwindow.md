@@ -1,4 +1,1 @@
----
-title: "Multiple Windows Example"
----
 

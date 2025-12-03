@@ -5,6 +5,8 @@
 	--md-annotation-icon-color: #FA5A0A;
 	--md-code-hl-comment-color: #57a64a;
 	--md-code-hl-function-color: #de8103;
+	--md-code-hl-string-color: #ff806f;
+	--md-code-hl-number-color: #ff0000;
 }
 
 .hyorange {
@@ -19,5 +21,9 @@
 .md-typeset .grid.cards > ul > li,
 .md-typeset .grid.cards > ul > li > * {
 	font-size: 0.6rem;
+}
+
+.md-sidebar--primary .md-nav--secondary {
+	margin-left: 10px; /* Adjust this value to nudge the line left by a few pixels */
 }
 

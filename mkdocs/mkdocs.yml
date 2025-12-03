@@ -98,7 +98,7 @@ nav:
       - 🔶TileSets: editor/tilesets.md
   - Programming Manual:
       - programming/index.md
-      - 🔶Windows & Cameras: programming/windows-cameras.md
+      - 🔶Cameras & Windows: programming/cameras-windows.md
       - 🔶Scene Management:
           - programming/scene/index.md
           - 🔸Item Nodes: programming/scene/item-nodes.md

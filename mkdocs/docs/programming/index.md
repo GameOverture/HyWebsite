@@ -12,7 +12,6 @@ classDiagram
   HyEngine <|-- YourGame
   class HyEngine{
     -HyInit initStruct
-    -HyComponent engineComponent
     ...
     +HyEngine(HyInit)
     ~HyEngine()
@@ -53,8 +52,8 @@ Simple programs might only need to declare a few scene nodes and can implement a
 
 </div>
 
-!!! note annotate
-    The member variables declared in your main game class encapsulate the flow or main components of the program. These are usually custom classes derived from `HyEntity2d`. (1)
+!!! tip annotate "Most code objects derive from `HyEntity2d`"
+    The member variables declared in your main game class can encapsulate the flow or main aspects of the program. These are usually custom classes derived from `HyEntity2d`. (1)
 
 1. `HyEntity2d` is a special scene node that can contain other scene nodes like sprites, text, and audio. It also serves as a way to logically group and update objects within the game world.  
 ``` mermaid
@@ -122,59 +121,95 @@ public:
 
 <div class="grid cards" markdown>
 
--   [:fontawesome-solid-video-camera:{.hyindicator}ㅤ**Windows & Cameras**](./windows-cameras.md)  
+-   [:fontawesome-solid-video-camera:{.hyindicator}ㅤ**Cameras & Windows**](./cameras-windows.md)  
     How to manage your camera viewports and render windows.
     ``` cpp
-    // Windows & Cameras
-    static uint32 NumWindows();
-    static HyWindow &Window(uint32 uiWindowIndex = 0);
+    std::vector<HyCamera2d *> cameraList;
+    for(uint32 i = 0; i < HyEngine::NumWindows(); ++i)
+    {
+        cameraList.push_back(HyEngine::Window(i).CreateCamera2d());
+        glm::vec2 ptCenter(HyEngine::Window(i).GetWidthF(0.5f),
+                           HyEngine::Window(i).GetHeightF(0.5f));
+        ...
+    }
     ```
 
--   [:material-graph-outline:{.hyindicator}ㅤ**Scene Management**](./scene/index.md)  
-    Where you make the game. [Item Nodes](./scene/item-nodes.md) | [Entities & Physics](./scene/entities.md) | [User Interface](./scene/user-interface.md)
+-   [:material-graph-outline:{.hyindicator}ㅤ**Scene Management**](./scene/index.md) -> [Item Nodes](./scene/item-nodes.md) | [Entities & Physics](./scene/entities.md) | [User Interface](./scene/user-interface.md)  
+    The building blocks to make the game.
     ``` cpp
-    // Scene Management
-    static float DeltaTime();
-    static double DeltaTimeD();
-    static void LoadingStatus(uint32 &uiNumQueuedOut, uint32&uiTotalOut);
-    static void PauseGame(bool bPause);
+    case STATE_Spinning:
+		m_SpinNode.rot.Offset((m_fSpinSpeed * HyEngine::DeltaTime()));
+		m_fElapsedTime += HyEngine::DeltaTime();
+		if(m_fElapsedTime >= 3.0f)
+			m_eState = STATE_PrepStop;
+		break;
+    case STATE_PrepStop:
+    ...
     ```
 
 -   [:material-controller:{.hyindicator}ㅤ**Input Handling**](./input.md)  
     Utilize Input Maps and get player input from various devices.
     ``` cpp
-    // Input Handling
-    static HyInput &Input();
+    uint32 uiDPadFlags = 0;
+    if(HyEngine::Input().IsActionDown(ARCADESTICK_Up))
+        uiDPadFlags |= DPad_Up;
+    if(HyEngine::Input().IsActionDown(ARCADESTICK_Down))
+        uiDPadFlags |= DPad_Down;
+    ...
+    if(HyEngine::Input().IsActionReleased(DEBUGKEY_DumpAtlases))
+        HyEngine::Diagnostics().DumpAtlasUsage();
     ```
 
 -   [:material-volume-high:{.hyindicator}ㅤ**Audio System**](./audio.md)  
     Manage how `HyAudio2d` audio cues are played back, categories, and settings.
     ``` cpp
-    // Audio System
-    static HyAudioCore &Audio();
+    btnVolumeDown.SetText("VOLUME DOWN");
+    btnVolumeDown.SetButtonClickedCallback(
+      [](HyButton *pBtn)
+      {
+        float fVolume = HyEngine::Audio().GetGlobalVolume() - 0.05f;
+        fVolume = HyMath::Clamp(fVolume, 0.0f, 1.0f);
+        HyEngine::Audio().SetGlobalVolume(fVolume);
+      });
     ```
 
 -   [:material-bug-outline:{.hyindicator}ㅤ**Diagnostics & Debugging**](./diagnostics.md)  
-    
+    Logging, performance profiling, and on-screen diagnostic overlays.
     ``` cpp
-    // Diagnostics & Debugging
-    static HyDiagnostics &Diagnostics();
+    HyEngine::Diagnostics().Init("Prefix", "MyText", 1);
+    ...
+    if(HyEngine::Input().IsActionReleased(DEBUGKEY_DiagFPS))
+    {
+        uint32 uiDiagFlags = HyEngine::Diagnostics().GetShowFlags();
+        uiDiagFlags ^= HYDIAG_Fps;
+        HyEngine::Diagnostics().Show(uiDiagFlags);
+    }
     ```
 
 -   [:material-shape-outline:{.hyindicator}ㅤ**Shaders**](./shaders.md)  
-    
+    Override built-in shaders on scene nodes to create impressive effects.
     ``` cpp
-    // Shaders
-    static HyShaderHandle DefaultShaderHandle(HyType eType);
+    pShader = HY_NEW HyShader(HYSHADERPROG_Primitive);
+    pShader->SetSourceCode(szVERTEXSHADER_SRC, HYSHADER_Vertex);
+    pShader->AddVertexAttribute("attrPos", HyShaderVariable::vec2);
+    pShader->AddVertexAttribute("attrUV", HyShaderVariable::vec2);
+    pShader->SetSourceCode(szFRAGMENTSHADER_SRC, HYSHADER_Fragment);
+    pShader->Finalize();
+    ...
+    m_PrimitiveBox.SetShader(pShader);
     ```
 
 -   [:material-database-outline:{.hyindicator}ㅤ**Direct Asset Loading**](./direct-assets.md)  
-    
+    Load raw images and audio files off disk using scene nodes.
     ``` cpp
-    // Direct Asset Loading
-    static std::string DataDir();
-    static HyTextureQuadHandle CreateTexture(std::string sFilePath, HyTextureInfo textureInfo);
-    static HyAudioHandle CreateAudio(std::string sFilePath, bool bIsStreaming = false, int32 iInstanceLimit = 0, int32 iCategoryId = 0);
+    HyTexturedQuad2d *pBoxArt = nullptr;
+    pBoxArt = HY_NEW HyTexturedQuad2d("C:/art.png", HyTextureInfo());
+    pBoxArt->Load();
+
+    m_AudioTrack.Init("C:/songs/track1.wav", true, 0, 0);
+    m_AudioTrack.volume.Set(1.0f);
+    m_AudioTrack.Play();
+    m_AudioTrack.Load();
     ```
 
 </div>

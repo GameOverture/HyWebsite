@@ -14,7 +14,9 @@ This will return the `HyWindow` object for the specified window index.
 
 That's all that's needed to setup the main window and a 2D camera. You can continue to the next topic, or continue to learn more advanced window and camera features below.
 
-## Camera Viewports
+## Cameras
+
+### Viewports
 
 By default, a newly created camera will cover the entire viewport of the window.
 
@@ -29,3 +31,7 @@ The viewport rectangle is defined in normalized coordinates, where (0,0) is the 
 ### Camera Transforms
 
 ### Camera Shake
+
+## Windows
+
+### Multiple Windows

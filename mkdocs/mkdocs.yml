@@ -65,7 +65,10 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/hyengine.css
-  
+
+extra_javascript:
+  - javascripts/mermaid.mjs
+
 extra:
   social:
     - icon: fontawesome/brands/github

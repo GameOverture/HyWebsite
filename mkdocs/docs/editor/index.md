@@ -2,6 +2,8 @@
 title: "Editor Manual"
 ---
 
+## Quick Tour
+
 <figure>
   <img src="../img/editor_overview.png" alt="HyEditor interface overview">
   <figcaption>HyEditor's default window layout.</figcaption>

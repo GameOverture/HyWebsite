@@ -77,9 +77,9 @@ To create a new Item you can :material-mouse-right-click:++right-button++ in the
 
 - `File > New Item > [select item]` from the top menu
 - Press ++ctrl+n++, ++s++ to create a new ![New Sprite](../img/editor/Sprite-New.png) Sprite  
-- Press ++ctrl+n++, ++m++ to create a new ![New TileMap](../img/editor/TileMap-New.png) Tile Map  
 - Press ++ctrl+n++, ++t++ to create a new ![New Text](../img/editor/Text-New.png) Text  
-- Press ++ctrl+n++, ++f++ to create a new ![New Particle FX](../img/editor/Particles-New.png) Particle FX  
+- Press ++ctrl+n++, ++m++ to create a new ![New TileMap](../img/editor/TileMap-New.png) Tile Map  
+- Press ++ctrl+n++, ++f++ to create a new ![New Particles](../img/editor/Particles-New.png) Particle FX  
 - Press ++ctrl+n++, ++i++ to create a new ![New Spine](../img/editor/Spine-New.png) Spine  
 - Press ++ctrl+n++, ++p++ to create a new ![New Prefab](../img/editor/Prefab-New.png) Prefab  
 - Press ++ctrl+n++, ++a++ to create a new ![New Audio](../img/editor/Audio-New.png) Audio  

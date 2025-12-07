@@ -68,6 +68,24 @@ pSprite->scale.Tween(1.5f, 1.5f, 2.5f);
 
 `HyAnimFloat` and `HyAnimVec`'s are very robust and share a similar API. 
 
+## Types
+
+The tabs below give overviews of the various types of built-in **Item Nodes** 
+
+=== "![Sprite](../../img/editor/Sprite.png) Sprite"  
+    Single image or animated sprite. Rendered onto a quad in 2D or 3D space.
+
+=== "![TextureQuad](../../img/editor/AtlasFrame.png) TextureQuad"
+
+=== "![Text](../../img/editor/Text.png) Text"
+
+=== "![Tile Map](../../img/editor/TileMap.png) Tile Map"
+
+=== "![Particle Effect](../../img/editor/Particles.png) Particles"
+
+=== "![Prefab](../../img/editor/Prefab.png) Prefab"
+
+=== "![Audio](../../img/editor/Audio.png) Audio"
 
 ## Node Hierarchy
 
@@ -103,8 +121,8 @@ IHyDrawable3d <|-- HySprite3d
 IHyDrawable3d <|-- HyText3d
 IHyDrawable3d <|-- HyTileMap3d
 
-class HyCamera2d:::Concrete
-class HyCamera3d:::Concrete
+class HyCamera2d:::Camera
+class HyCamera3d:::Camera
 class HyAudio2d:::Concrete
 class HyAudio3d:::Concrete
 class HyEntity2d:::Entity
@@ -116,6 +134,7 @@ class HySprite3d:::Concrete
 class HyText3d:::Concrete
 class HyTileMap3d:::Concrete
 
+classDef Camera :,stroke-width:2px,stroke:#333333,
 classDef Concrete :,stroke-width:2px,stroke:#FA5A0A,
 classDef Entity :,stroke-width:2px,stroke:#FF3333,
 ```
@@ -123,7 +142,7 @@ classDef Entity :,stroke-width:2px,stroke:#FF3333,
 !!! note ""
     For clarity, not all node classes are shown in the diagram above. All the ommitted **Item Nodes** derive either from `IHyDrawable2d` or `IHyDrawable3d`
 
-For each layer in the hierarchy:
+Each layer in the hierarchy add enough functionality to slot an **Item Node** class into, while keeping shared functionality of the previous layers. This results in clean API across nodes, reusable code, and a compact memory footprint.
 
 <div class="grid" markdown>
 
@@ -147,21 +166,3 @@ Base class `IHyNode` for all scene nodes. It keeps track of its type, whether it
 2D or 3D
 
 </div>
-
-## Types
-
-The basic node types you can instantiate correspond to the different types of [Project Items](../../editor/items/index.md) you can create in the HyEditor. These include:
-
-=== "![Sprite](../../img/editor/Sprite.png) Sprite"
-
-=== "![Tile Map](../../img/editor/TileMap.png) Tile Map"
-
-=== "![Text](../../img/editor/Text.png) Text"
-
-=== "![Particle Effect](../../img/editor/Particles.png) Particle Effects"
-
-=== "![Prefab](../../img/editor/Prefab.png) Prefab"
-
-=== "![Audio](../../img/editor/Audio.png) Audio"
-
-

@@ -93,11 +93,12 @@ nav:
           - editor/items/index.md
           - 🔸Sprites: editor/items/sprites.md
           - 🔸Text: editor/items/text.md
-          - 🔸Tile Map: editor/items/tilemap.md
+          - 🔸Tile Map: editor/items/tilemaps.md
           - 🔸Particles: editor/items/particles.md
           - 🔸Spine: editor/items/spine.md
+          - 🔸Prefabs: editor/items/prefabs.md
           - 🔸Audio: editor/items/audio.md
-          - 🔸Entity: editor/items/entity.md
+          - 🔸Entity: editor/items/entities.md
       - 🔶TileSets: editor/tilesets.md
   - Programming Manual:
       - programming/index.md

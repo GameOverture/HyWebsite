@@ -57,12 +57,12 @@ Most games will only need one window, but if your program requires multiple wind
 Sets a fixed update rate for the game loop. Rendering may occur more frequently, but the game logic will only update at this rate. A value of 0 means it will use non-throttled, variable updating, and will match the rendering frame rate.  
 - **Show Mouse Cursor**  
 When the mouse cursor is over the game window, it will show the operating system's version of the mouse if this option is checked. Otherwise, the OS's mouse cursor will be hidden while over the game window.  
-- **Number of Input Maps**  
-Input Maps take all the actions the player can perform and assigns inputs to them. You generally set the number of input maps equal to the number of local players your game supports. Each player will have their own input map.  
 </div>
 </div>
 
 <div class="grid cards" markdown>
+- **Number of Input Maps**  
+Input Maps take all the actions the player can perform and assigns inputs to them. You generally set the number of input maps equal to the number of local players your game supports. Each player will have their own input map.  
 - **Pixels Per Meter**  
 Sets the scale of the physics simulation. This value defines how many pixels in the game world correspond to one meter in the physics engine. Adjusting this value can affect the feel of movement and collisions in your game.  
 - **Gravity**  
@@ -70,18 +70,4 @@ Direction of the world's gravity vector, measured in meters per second squared (
 - **Use Console Window**  
 When checked, a separate console window will open alongside your game. This is useful for debugging, as it can display log messages, errors, and other output from your game. The Size is not the resolution of the console window, but rather the number of text columns and rows it can display at once. Location is desktop coordinates like how Render Windows are positioned.
 </div>
-
-## Creating new Project Items
-
-To create a new Item you can :material-mouse-right-click:++right-button++ in the [Project Explorer](#project-explorer) on a ![Prefix Folder](../img/editor/Prefix.png) prefix folder and select `New Item > [select item]` to create an item at that location, or use one of the following methods:
-
-- `File > New Item > [select item]` from the top menu
-- Press ++ctrl+n++, ++s++ to create a new ![New Sprite](../img/editor/Sprite-New.png) Sprite  
-- Press ++ctrl+n++, ++t++ to create a new ![New Text](../img/editor/Text-New.png) Text  
-- Press ++ctrl+n++, ++m++ to create a new ![New TileMap](../img/editor/TileMap-New.png) Tile Map  
-- Press ++ctrl+n++, ++f++ to create a new ![New Particles](../img/editor/Particles-New.png) Particle FX  
-- Press ++ctrl+n++, ++i++ to create a new ![New Spine](../img/editor/Spine-New.png) Spine  
-- Press ++ctrl+n++, ++p++ to create a new ![New Prefab](../img/editor/Prefab-New.png) Prefab  
-- Press ++ctrl+n++, ++a++ to create a new ![New Audio](../img/editor/Audio-New.png) Audio  
-- Press ++ctrl+n++, ++e++ to create a new ![New Entity](../img/editor/Entity-New.png) Entity  
 

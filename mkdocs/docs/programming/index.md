@@ -127,10 +127,10 @@ public:
     std::vector<HyCamera2d *> cameraList;
     for(uint32 i = 0; i < HyEngine::NumWindows(); ++i)
     {
-        cameraList.push_back(HyEngine::Window(i).CreateCamera2d());
-        glm::vec2 ptCenter(HyEngine::Window(i).GetWidthF(0.5f),
-                           HyEngine::Window(i).GetHeightF(0.5f));
-        ...
+      cameraList.push_back(HyEngine::Window(i).CreateCamera2d());
+      glm::vec2 ptCenter(HyEngine::Window(i).GetWidthF(0.5f),
+                         HyEngine::Window(i).GetHeightF(0.5f));
+      ...
     }
     ```
 
@@ -138,13 +138,13 @@ public:
     The building blocks to make the game.
     ``` cpp
     case STATE_Spinning:
-		m_SpinNode.rot.Offset((m_fSpinSpeed * HyEngine::DeltaTime()));
-		m_fElapsedTime += HyEngine::DeltaTime();
-		if(m_fElapsedTime >= 3.0f)
-			m_eState = STATE_PrepStop;
-		break;
+      m_SpinNode.rot.Offset((m_fSpeed * HyEngine::DeltaTime()));
+      m_fElapsedTime += HyEngine::DeltaTime();
+      if(m_fElapsedTime >= 3.0f)
+      	m_eState = STATE_PrepStop;
+      break;
     case STATE_PrepStop:
-    ...
+      ...
     ```
 
 -   [:material-controller:{.hyindicator}ㅤ**Input Handling**](./input.md)  
@@ -152,24 +152,24 @@ public:
     ``` cpp
     uint32 uiDPadFlags = 0;
     if(HyEngine::Input().IsActionDown(ARCADESTICK_Up))
-        uiDPadFlags |= DPad_Up;
+      uiDPadFlags |= DPad_Up;
     if(HyEngine::Input().IsActionDown(ARCADESTICK_Down))
-        uiDPadFlags |= DPad_Down;
+      uiDPadFlags |= DPad_Down;
     ...
     if(HyEngine::Input().IsActionReleased(DEBUGKEY_DumpAtlases))
-        HyEngine::Diagnostics().DumpAtlasUsage();
+      HyEngine::Diagnostics().DumpAtlasUsage();
     ```
 
 -   [:material-volume-high:{.hyindicator}ㅤ**Audio System**](./audio.md)  
-    Manage how `HyAudio2d` audio cues are played back, categories, and settings.
+    Manage how `HyAudio2d` audio cues are played back.
     ``` cpp
     btnVolumeDown.SetText("VOLUME DOWN");
     btnVolumeDown.SetButtonClickedCallback(
       [](HyButton *pBtn)
       {
-        float fVolume = HyEngine::Audio().GetGlobalVolume() - 0.05f;
-        fVolume = HyMath::Clamp(fVolume, 0.0f, 1.0f);
-        HyEngine::Audio().SetGlobalVolume(fVolume);
+        float fVol = HyEngine::Audio().GetGlobalVolume() - 0.05f;
+        fVol = HyMath::Clamp(fVol, 0.0f, 1.0f);
+        HyEngine::Audio().SetGlobalVolume(fVol);
       });
     ```
 
@@ -180,9 +180,9 @@ public:
     ...
     if(HyEngine::Input().IsActionReleased(DEBUGKEY_DiagFPS))
     {
-        uint32 uiDiagFlags = HyEngine::Diagnostics().GetShowFlags();
-        uiDiagFlags ^= HYDIAG_Fps;
-        HyEngine::Diagnostics().Show(uiDiagFlags);
+      uint32 uiDiagFlags = HyEngine::Diagnostics().GetShowFlags();
+      uiDiagFlags ^= HYDIAG_Fps;
+      HyEngine::Diagnostics().Show(uiDiagFlags);
     }
     ```
 
@@ -191,9 +191,9 @@ public:
     ``` cpp
     pShader = HY_NEW HyShader(HYSHADERPROG_Primitive);
     pShader->SetSourceCode(szVERTEXSHADER_SRC, HYSHADER_Vertex);
-    pShader->AddVertexAttribute("attrPos", HyShaderVariable::vec2);
-    pShader->AddVertexAttribute("attrUV", HyShaderVariable::vec2);
-    pShader->SetSourceCode(szFRAGMENTSHADER_SRC, HYSHADER_Fragment);
+    pShader->AddVertexAttribute("aPos", HyShaderVariable::vec2);
+    pShader->AddVertexAttribute("aUV", HyShaderVariable::vec2);
+    pShader->SetSourceCode(szFRAGSHADER_SRC, HYSHADER_Fragment);
     pShader->Finalize();
     ...
     m_PrimitiveBox.SetShader(pShader);
@@ -202,9 +202,9 @@ public:
 -   [:material-database-outline:{.hyindicator}ㅤ**Direct Asset Loading**](./direct-assets.md)  
     Load raw images and audio files off disk using scene nodes.
     ``` cpp
-    HyTexturedQuad2d *pBoxArt = nullptr;
-    pBoxArt = HY_NEW HyTexturedQuad2d("C:/art.png", HyTextureInfo());
-    pBoxArt->Load();
+    HyTexturedQuad2d *pArt = nullptr;
+    pArt = HY_NEW HyTexturedQuad2d("C:/art.png", HyTextureInfo());
+    pArt->Load();
 
     m_AudioTrack.Init("C:/songs/track1.wav", true, 0, 0);
     m_AudioTrack.volume.Set(1.0f);

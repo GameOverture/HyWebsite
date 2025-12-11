@@ -2,7 +2,7 @@
 title: "🔶Project Items"
 ---
 
-Project Items are the building blocks of your game. They are created and edited within the **HyEditor** and used to assemble the various scene nodes that make up your game world. There are several types of Project Items, each serving a specific purpose, but they also have common concepts that apply to all items.
+Project Items are the components you use to build your game. They are created and edited within the **HyEditor** and used to assemble the various scene nodes that make up your game world. There are several types of Project Items, each serving a specific purpose, but they also have common concepts that apply to all items.
 
 ## Creating new Project Items
 
@@ -18,11 +18,25 @@ Within the [Project Explorer](../projects.md#project-explorer), to create a new 
 - Press ++ctrl+n++, ++a++ to create a new ![New Audio](../../img/editor/Audio-New.png) Audio  
 - Press ++ctrl+n++, ++e++ to create a new ![New Entity](../../img/editor/Entity-New.png) Entity  
 
+You will be shown the "Add a new item" dialog which will look like either of these:
+
+![New Item Dialog](../../img/editor/dlg-new-item.png)
+
+Specify the prefix and name you want for the Project Item. This is where it will be located in the Project Explorer, as well as its "path" to create an instance of it in code. `ex. "RootPrefix/SubPrefix/Name"` (Note prefixes and names are case insensitive)
+
+Some Project Items require an **Import File** upon creation. The browse button will open a file dialog with a filter for the expected file type. This file may be located anywhere, and is copied (along with any dependency files) into the project's meta-data.
+
+After creation, the Project Item will be opened and the Properties window will be populated with widgets to modify the item. The center render preview will reflect changes made here.
+
+![Post item creation](../../img/editor/post-item-creation.png)
+
+While each **Project Item** will have different properties, they all share the ability to set 'states' which is circled in red in the above image.
+
 ## Item States
 
-Every Project Item utilizes the concept of 'states', regardless of which type it is. In the case of a sprite, this can be the different animations a character can do, like idle, walk, and jump. Or if the sprite is a framed painting wall decoration, each state could be a different piece of art. For a text item, each state might be the same font/style but at different sizes, or each state could be the font in regular, bold, and italic. Ultimately how you want to utilize the states for any given Project Item is up to you.
+Every **Project Item** utilizes the concept of 'states', regardless of which type it is. In the case of a sprite, this can be the different animations a character can do, like idle, walk, and jump. Or if the sprite is a framed painting wall decoration, each state could be a different piece of art. For a text item, each state might be the same font/style but at different sizes, or each state could be the font in regular, bold, and italic. Ultimately how you want to utilize the states for any given Project Item is up to you.
 
-In every Project Item's Properties window, you will find the States Groupbox that looks like this:
+In every **Project Item**'s Properties window, you will find the States Groupbox that looks like this:
 
 ![Project Item State Widget](../../img/editor/widgets-state.png){ align=left }
 

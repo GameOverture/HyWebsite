@@ -71,6 +71,37 @@
 					background: var(--hy-orange);
 				}
 
+		/* Feature headers */
+		.project-banner {
+			position: relative;
+			width: 100%;
+			aspect-ratio: 420 / 300;
+			overflow: hidden;
+			border-radius: 12px;
+			background: #1a1a1a;
+		}
+
+			.project-banner video {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+		.project-banner-overlay {
+			position: absolute;
+			inset: 0;
+			display: flex;
+			align-items: flex-end;
+			padding: 24px;
+			background: linear-gradient( transparent 40%, rgba(0, 0, 0, 0.8) );
+		}
+
+		.project-banner h2 {
+			color: white;
+			font-size: 2rem;
+			margin: 0;
+		}
+
 		/* Feature Grid */
 		.feature-section {
 			padding: 60px 30px;
@@ -158,12 +189,12 @@
 	<section class="hero">
 		<h1>Harmony Engine</h1>
 		<p>
-			Welcome to the official site for HyEngine. An entirely hand written, free and open source 2D game engine and editor.
+			Welcome to the official site. An entirely hand written, free and open source 2D game engine and editor.
 		</p>
 
 		<div class="buttons">
 			<a href="https://github.com/GameOverture/HarmonyEngine" class="btn">
-				Download HyEngine
+				Download Latest
 			</a>
 			<a href="/docs" class="btn secondary">
 				Read Documentation
@@ -176,13 +207,23 @@
 		<center><h2>Harmony Engine comprises of two projects</h2></center>
 		<div class="feature-grid">
 			<div class="feature-column">
-				<h2>HyEngine</h2>
+
+				<div class="project-banner">
+					<video autoplay muted loop playsinline poster="assets/hyengine_poster.jpg">
+						<source src="assets/hyengine_showcase.webm" type="video/webm">
+						<source src="assets/hyengine_showcase.mp4" type="video/mp4">
+					</video>
+
+					<div class="project-banner-overlay">
+						<h2>HyEngine</h2>
+					</div>
+				</div>
 
 				<div class="card">
 					<img src="assets/opengl_icon.png" alt="Rendering Icon" />
 					<h3>Cross-Platform Support</h3>
 					<p>
-						Platform independent C/C++ OpenGL/WebGL rendering with custom shaders, multiple windows, and fast WebAssembly builds.
+						Written in platform independent C/C++. Highly compatible OpenGL/WebGL rendering, multiple windows, and fast WebAssembly builds.
 					</p>
 				</div>
 
@@ -212,7 +253,17 @@
 			</div>
 
 			<div class="feature-column">
-				<h2>HyEditor</h2>
+
+				<div class="project-banner">
+					<video autoplay muted loop playsinline poster="assets/hyeditor_poster.jpg">
+						<source src="assets/hyeditor_showcase.webm" type="video/webm">
+						<source src="assets/hyeditor_showcase.mp4" type="video/mp4">
+					</video>
+
+					<div class="project-banner-overlay">
+						<h2>HyEditor</h2>
+					</div>
+				</div>
 
 				<div class="card">
 					<img src="assets/editor_icon.png" alt="Editor Icon" />
@@ -263,7 +314,7 @@
 				<img src="assets/tech-stb.png" alt="stb" title="stb" style="width:50px; height:50px; margin:5px;" />
 				<img src="assets/tech-glfw.png" alt="GLFW (Graphics Library Framework)" title="GLFW (Graphics Library Framework)" style="width:50px; height:50px; margin:5px;" />
 				<img src="assets/tech-sdl.png" alt="S" title="SDL (Simple DirectMedia Layer)" style="width:50px; height:50px; margin:5px;" />
-				<!-- <img src="assets/glad_icon.png" alt="glad" title="glad" style="width:50px; height:50px; margin:5px;" /> -->
+				<!-- <img src="assets/tech-glad.png" alt="glad" title="glad" style="width:50px; height:50px; margin:5px;" /> -->
 				<img src="assets/tech-nlohmannJson.png" alt="nlohmann JSON" title="nlohmann JSON" style="width:50px; height:50px; margin:5px;" />
 				<img src="assets/tech-rapidJson.png" alt="Rapid JSON" title="Rapid JSON" style="width:50px; height:50px; margin:5px;" />
 			</td>
@@ -292,18 +343,16 @@
 	<br>
 	
 	<center>
-		Harmony Engine is fully self-authored with handcrafted code from over a decade, and I kept the following principles throughout its development:
+		Harmony Engine is fully self-authored with handcrafted code from over a decade. I kept the following principles throughout its development:
 	</center>
 	<div style="display: flex; justify-content: center; align-items: center;">
 		<ul style="list-style-position: inside; padding-left: 0; text-align: justify;">
 			<li>Creating engine APIs that are convienent, understandable, and useful for the game programmer
 			<li>Systems under the hood are performant and CPU cache efficient
 			<li>Stick to minimal dependencies for robust platform support, including browsers via Emscripten
+			<li>All engine tools, asset pipeline, and build process are built into a single scene editor program: HyEditor
 		</ul>
 	</div>
-	<center>
-		Along with HyEngine, I rolled all its tools, asset pipeline, and build process into a single editor program: HyEditor
-	</center>
 	
 		<!--
 		<p>

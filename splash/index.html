@@ -144,10 +144,12 @@
 			}
 
 			.card img {
-				width: 70px;
-				height: 70px;
-				margin-bottom: 15px;
-				opacity: 0.9;
+				width: 100%;
+				height: 80px;
+				object-fit: cover;
+				display: block;
+				margin-bottom: 0px;
+				opacity: 1.0;
 			}
 
 			.card h3 {
@@ -204,10 +206,13 @@
 
 	<!-- FEATURE GRID -->
 	<section class="feature-section">
+		
 		<center><h2>Harmony Engine comprises of two projects</h2></center>
-		<div class="feature-grid">
-			<div class="feature-column">
 
+		<div class="feature-grid">
+
+			<!-- HyEngine COLUMN -->
+			<div class="feature-column">
 				<div class="project-banner">
 					<video autoplay muted loop playsinline poster="assets/hyengine_poster.jpg">
 						<source src="assets/hyengine_showcase.webm" type="video/webm">
@@ -220,40 +225,40 @@
 				</div>
 
 				<div class="card">
-					<img src="assets/opengl_icon.png" alt="Rendering Icon" />
+					<img src="assets/header-xplatform.png" alt="Cross-Platform Support" />
 					<h3>Cross-Platform Support</h3>
 					<p>
-						Written in platform independent C/C++. Highly compatible OpenGL/WebGL rendering, multiple windows, and fast WebAssembly builds.
+						Written in platform independent C/C++. Highly compatible OpenGL/WebGL rendering with multiple window support. Easily build for PC or the web browser.
 					</p>
 				</div>
 
 				<div class="card">
-					<img src="assets/physics_icon.png" alt="Physics Icon" />
-					<h3>Box2D Physics</h3>
+					<img src="assets/header-gameloop.png" alt="Deterministic Game Loop" />
+					<h3>Deterministic Game Loop</h3>
 					<p>
-						Stable, deterministic physics simulation integrated directly into Entities and the node system.
+						Optionally throttle game update frequency independently to the render framerate. Optimal networking conditions, replay-systems, and reproducible debugging.
 					</p>
 				</div>
 
 				<div class="card">
-					<img src="assets/emscripten_icon.png" alt="Web Icon" />
-					<h3>WebAssembly Export</h3>
+					<img src="assets/header-scenemanagement.png" alt="Scene Management" />
+					<h3>Scene Management</h3>
 					<p>
-						Optionally build and export your game for the web browser. HyEditor fully automates the Emscripten pipeline.
+						Programmatically assemble instances of prefabs into entities that can represent game states, menus, and level design. Assets automatically stream in/out based on controlled prefab usage.
 					</p>
 				</div>
 
 				<div class="card">
-					<img src="assets/code_icon.png" alt="Code Icon" />
-					<h3>Programmer-First Design</h3>
+					<img src="assets/header-api.png" alt="Code Icon" />
+					<h3>Programmer-First API Design</h3>
 					<p>
-						A clean C++ API with Nodes, Entities, animation floats, physics shapes, UI widgets, and more.
+						A clean intuitive C++ API shared across all nodes and entities. "Animation Floats" expose easy tween/easing and callbacks on transformations and properties.
 					</p>
 				</div>
 			</div>
 
+			<!-- HyEditor COLUMN -->
 			<div class="feature-column">
-
 				<div class="project-banner">
 					<video autoplay muted loop playsinline poster="assets/hyeditor_poster.jpg">
 						<source src="assets/hyeditor_showcase.webm" type="video/webm">
@@ -266,32 +271,31 @@
 				</div>
 
 				<div class="card">
-					<img src="assets/editor_icon.png" alt="Editor Icon" />
+					<img src="assets/header-editor.png" alt="Editor" />
 					<h3>Powerful WYSIWYG Editor</h3>
 					<p>
-						HyEditor manages assets, builds, animation timelines, entities, visual layouts, and
-						auto-generates clean C++ gameplay classes.
+						A single visual editor tool to manage assets, create prefabs, and assemble entities. Entities can be animated on a dope sheet timeline and export as code-ready C++ classes.
 					</p>
 				</div>
 
 				<div class="card">
-					<img src="assets/spine_icon.png" alt="Spine Icon" />
-					<h3>Spine® Animation Support</h3>
+					<img src="assets/header-buildprocess.png" alt="Automated Build Process" />
+					<h3>Automated C++ build process</h3>
 					<p>
-						Import Spine skeletons into HyEditor, configure animation states, and blend/mix at runtime.
+						Manages CMake project generation under the hood. Easily manage source files, dependencies, and multi-platform builds. Fully automate the Emscripten pipeline when deploying to web.
 					</p>
 				</div>
 
 				<div class="card">
-					<img src="assets/cmake_icon.png" alt="CMake Icon" />
-					<h3>CMake Project Automation</h3>
+					<img src="assets/header-tileeditor.png" alt="Tile Editor" />
+					<h3>Powerful Tile Editor</h3>
 					<p>
-						HyEditor manages all CMake generation, source files, dependencies, and multi-platform builds.
+						Create orthogonal, isometric, and hexagonal TileSets with infinite-spanding multi-layered TileMaps. Tiles can hold info like auto-tiling and collision to quickly create ready-to-go levels and worlds.
 					</p>
 				</div>
 
 				<div class="card">
-					<img src="assets/data_icon.png" alt="Pipeline Icon" />
+					<img src="assets/header-assetpipeline.png" alt="Asset Pipeline" />
 					<h3>Asset Pipeline</h3>
 					<p>
 						All asset management tasks from importing, iteration, replacing, to in-engine. Very efficient atlas packing and utilization, bitmap fonts, audio banks, tilesets, and Spine support.
@@ -301,6 +305,13 @@
 
 		</div>
 	</section>
+
+	<center>
+		<h3>Spine® Animation Support</h3>
+		<p>
+			Import Spine skeletons into HyEditor, configure animation states, and blend/mix at runtime.
+		</p>
+	</center>
 
 	<!-- TECHNOLOGIES USED -->
 	<h2 style="text-align:center; margin-top:50px;">🛠 Technologies Used</h2>

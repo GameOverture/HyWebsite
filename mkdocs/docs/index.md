@@ -63,25 +63,21 @@ hide:
 </style>
 
 <p class="center">
-Welcome to the official documentation for <a href="https://hyengine.org"><strong>HyEngine</strong></a>!
+    <center><h1>Welcome to the official documentation for <a href="https://hyengine.org"><strong>Harmony Engine</strong></a>!</h1></center>
+<p class="center">
+    New to Harmony? Get step-by-step instructions for installing Harmony Engine and creating your first functional project.
+    <div class="center-buttons">
+	    <a href="getting-started/">Getting Started</a>
+    </div>
+</p>
 </p>
 
 <div class="features-grid">
 
   <div class="feature-card">
-    <h3>New to Harmony?</h3>
+    <h3><b>HyEditor</b> - Design Tool</h3>
     <p class="center">
-      Provides step-by-step instructions for installing Harmony Engine and creating your first functional project. Jump in and learn the essentials.
-    </p>
-	<div class="center-buttons">
-	  <a href="getting-started/">Getting Started</a>
-	</div>
-  </div>
-
-  <div class="feature-card">
-    <h3>Editor Design Tool</h3>
-    <p class="center">
-      All of Harmony's tools are wrapped into the HyEditor. From project management, asset pipelines, and scene item creation.
+      All of Harmony's tools are wrapped into the HyEditor. From project management, asset pipelines, and creating scene prefabs and entities.
     </p>
 	<div class="center-buttons">
 	  <a href="editor/">Editor Manual</a>
@@ -89,7 +85,7 @@ Welcome to the official documentation for <a href="https://hyengine.org"><strong
   </div>
 
   <div class="feature-card">
-    <h3>Programming the Game</h3>
+    <h3><b>HyEngine</b> - Programming the Runtime</h3>
     <p class="center">
       Understand how Harmony’s runtime API and how it works under the hood. Scene nodes, windows, cameras, input, rendering, the game loop and more.
     </p>
@@ -98,14 +94,12 @@ Welcome to the official documentation for <a href="https://hyengine.org"><strong
 	</div>
   </div>
 
-  <div class="feature-card">
-    <h3>Learn with Sample Projects</h3>
-    <p class="center">
-      Browse a collection of sample projects demonstrating major features how they work in practice. Each example illustrates practical usage patterns.
-    </p>
-	<div class="center-buttons">
-	  <a href="examples/">Example Projects</a>
-	</div>
-  </div>
-
 </div>
+
+<center>
+    <h3>Learn with Sample Projects</h3>
+    Browse a collection of sample projects demonstrating major features how they work in practice. Each example illustrates practical usage patterns.
+    <div class="center-buttons">
+	    <a href="examples/">Example Projects</a>
+    </div>
+</center>

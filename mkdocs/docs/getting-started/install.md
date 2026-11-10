@@ -1,14 +1,15 @@
-This guide explains how to install the Harmony Game Engine (HyEngine) and prepare your environment. You can optionally compile the HyEditor or download a prebuilt release. All steps assume a Windows or Linux development environment.
+## 1. Prerequites
+All steps assume a Windows or Linux development environment. Before cloning Harmony Engine or building the editor, ensure the following tools are installed:
 
-## Prerequites
-Before cloning Harmony Engine or building the editor, ensure the following tools are installed:
+<center><h3>C++ Toolchain (IDE)</h3></center>
 
-### C++ Toolchain (IDE)
-Visual Studio 2022/2026 is the recommended development environment on Windows: [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com/)
+**Windows:** Visual Studio 2022/2026 is the recommended development environment: [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com/).
 
-### Git
+Builds and IDEs that are supported and compatible with CMake should also work.
 
-The Harmony Git repository is referenced in all game projects and builds from source. Harmony also uses Git submodules for its dependencies, so a Git client is required.
+<center><h3>Git</h3></center>
+
+The Harmony Git repository needs to reside on your machine since it is referenced in all game projects and builds from source. Harmony also uses Git submodules for its dependencies, so a Git client is required.
 
 **Windows:**
 Download Git for Windows: [https://git-scm.com/download/win](https://git-scm.com/download/win)
@@ -17,13 +18,14 @@ Download Git for Windows: [https://git-scm.com/download/win](https://git-scm.com
 Git is typically installed already. If not:
 `sudo apt install git`
 
-### CMake
+<center><h3>CMake</h3></center>
+
 Harmony Engine uses CMake internally to configure and generate all build files for the engine, editor, and game projects.
 
 1. Download CMake: [https://cmake.org/download/](https://cmake.org/download/)
 2. Ensure you select "Add CMake to system PATH" during installation
 
-## Clone Git repository
+## 2. Clone Git repository
 
 Clone the Harmony Engine repository and initialize submodules:
 ```
@@ -34,7 +36,7 @@ git submodule update --init --recursive
 Editor and Engine submodules are found in their respective 'vendor' directories.
 > Important: Submodules must be initialized or the editor and engine will not build correctly.
 
-## Get the Editor
+## 3. Get the Editor
 You can either:
 
 - Download a pre-built Release, or
@@ -87,7 +89,7 @@ In the next dialog, choose which IDE to generate in first combo box (Visual Stud
 
 > If using Visual Studio, installing *Qt Visual Studio Tools* extension is recommended for Qt-aware debugging and UI file navigation
 
-## Running the Editor for the First Time
+## 4. Running the Editor for the First Time
 
 Whenever HyEditor launches, it checks whether it can find where the Harmony Engine project is located. 
 

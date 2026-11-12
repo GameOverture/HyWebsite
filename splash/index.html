@@ -93,7 +93,7 @@
 			display: flex;
 			align-items: flex-end;
 			padding: 24px;
-			background: linear-gradient( transparent 40%, rgba(0, 0, 0, 0.8) );
+			background: linear-gradient( transparent 30%, rgba(0, 0, 0, 1.0) );
 		}
 
 		.project-banner h2 {
@@ -211,52 +211,6 @@
 
 		<div class="feature-grid">
 
-			<!-- HyEngine COLUMN -->
-			<div class="feature-column">
-				<div class="project-banner">
-					<video autoplay muted loop playsinline poster="assets/hyengine_poster.jpg">
-						<source src="assets/hyengine_showcase.webm" type="video/webm">
-						<source src="assets/hyengine_showcase.mp4" type="video/mp4">
-					</video>
-
-					<div class="project-banner-overlay">
-						<h2>HyEngine</h2>
-					</div>
-				</div>
-
-				<div class="card">
-					<img src="assets/header-xplatform.png" alt="Cross-Platform Support" />
-					<h3>Cross-Platform Support</h3>
-					<p>
-						Written in platform independent C/C++. Highly compatible OpenGL/WebGL rendering with multiple window support. Easily build for PC or the web browser.
-					</p>
-				</div>
-
-				<div class="card">
-					<img src="assets/header-gameloop.png" alt="Deterministic Game Loop" />
-					<h3>Deterministic Game Loop</h3>
-					<p>
-						Optionally throttle game update frequency independently to the render framerate. Optimal networking conditions, replay-systems, and reproducible debugging.
-					</p>
-				</div>
-
-				<div class="card">
-					<img src="assets/header-scenemanagement.png" alt="Scene Management" />
-					<h3>Scene Management</h3>
-					<p>
-						Programmatically assemble instances of prefabs into entities that can represent game states, menus, and level design. Assets automatically stream in/out based on controlled prefab usage.
-					</p>
-				</div>
-
-				<div class="card">
-					<img src="assets/header-api.png" alt="Code Icon" />
-					<h3>Programmer-First API Design</h3>
-					<p>
-						A clean intuitive C++ API shared across all nodes and entities. "Animation Floats" expose easy tween/easing and callbacks on transformations and properties.
-					</p>
-				</div>
-			</div>
-
 			<!-- HyEditor COLUMN -->
 			<div class="feature-column">
 				<div class="project-banner">
@@ -299,6 +253,52 @@
 					<h3>Asset Pipeline</h3>
 					<p>
 						All asset management tasks from importing, iteration, replacing, to in-engine. Very efficient atlas packing and utilization, bitmap fonts, audio banks, tilesets, and Spine support.
+					</p>
+				</div>
+			</div>
+
+			<!-- HyEngine COLUMN -->
+			<div class="feature-column">
+				<div class="project-banner">
+					<video autoplay muted loop playsinline poster="assets/hyengine_poster.jpg">
+						<source src="assets/hyengine_showcase.webm" type="video/webm">
+						<source src="assets/hyengine_showcase.mp4" type="video/mp4">
+					</video>
+
+					<div class="project-banner-overlay">
+						<h2>HyEngine</h2>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="assets/header-xplatform.png" alt="Cross-Platform Support" />
+					<h3>Cross-Platform Support</h3>
+					<p>
+						Written in platform independent C/C++. Highly compatible OpenGL/WebGL rendering with multiple window support. Easily build for PC or the web browser.
+					</p>
+				</div>
+
+				<div class="card">
+					<img src="assets/header-api.png" alt="Code Icon" />
+					<h3>Programmer-First API Design</h3>
+					<p>
+						A clean intuitive C++ API shared across all nodes and entities. "Animation Floats" expose easy tween/easing and callbacks on transformations and properties.
+					</p>
+				</div>
+
+				<div class="card">
+					<img src="assets/header-gameloop.png" alt="Deterministic Game Loop" />
+					<h3>Deterministic Game Loop</h3>
+					<p>
+						Optionally throttle game update frequency independently to the render framerate. Optimal networking conditions, replay-systems, and reproducible debugging.
+					</p>
+				</div>
+
+				<div class="card">
+					<img src="assets/header-scenemanagement.png" alt="Scene Management & World Streaming" />
+					<h3>Scene Management & World Streaming</h3>
+					<p>
+						Programmatically assemble instances of prefabs into entities that can represent game states, menus, and level design. Assets automatically stream in/out based on controlled prefab usage.
 					</p>
 				</div>
 			</div>

@@ -11,22 +11,15 @@ How your game application works with HyEngine. All new projects are generated wi
 classDiagram
   HyEngine <|-- YourGame
   class HyEngine{
-    -HyInit initStruct
-    ...
-    +HyEngine(HyInit)
+    HyEngine(HyInit)
     ~HyEngine()
-    +RunGame() int32
-    #virtual OnUpdate() bool
+    int32 RunGame()
+    virtual bool OnUpdate()
   }
   class YourGame{
-    -HyCamera2d * pCamera
-    -MainMenu mainMenu
-    -ILevel * pCurrentLevel
-    -LevelOne LevelOne
-    ...
-    +YourGame(HyInit)
+    YourGame(HyInit)
     ~YourGame()
-    #override OnUpdate() bool
+    override bool OnUpdate()
   }
 ```
 
@@ -46,7 +39,7 @@ Use `YourGame` class constructor to initialize your game.
 
 Override `OnUpdate()` to implement your game's main logic, such as updating the current level or handling menu navigation. `OnUpdate()` is invoked within Harmony's main game loop whenever a frame of game logic needs to happen.
 
-Simple programs might only need to declare a few scene nodes and can implement all logic directly in `OnUpdate()`. More complex games will likely want to create separate classes to encapsulate different game states or levels.  
+Simple programs might only need to declare a few prefab instances and can implement all logic directly in `OnUpdate()`. Typically games will likely want to create separate `HyEntity` classes to encapsulate different game states or levels.  
 
 </div>
 

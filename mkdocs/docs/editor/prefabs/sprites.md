@@ -1,10 +1,10 @@
-﻿Sprite Items are used to display textured quads in 2D or 3D space. To get started with sprites, you need to have imported images into the ![Atlases Icon](../../img/editor/atlas-file.png)**Atlases** section of the [Asset Manager](../asset-manager.md). Once you have your images imported, you can add them as frames to a state of the Sprite Item. Single frame sprites and animated sprites are created and used the same way. If this is an animated sprite with multiple frames, you can preview the animation using ++space++ which will play/pause the animation starting from the currently selected frame in the properties table.
+﻿Sprite Prefabs are used to display textured quads in 2D or 3D space. To get started with sprites, you need to have imported images into the ![Atlases Icon](../../img/editor/atlas-file.png)**Atlases** section of the [Asset Manager](../asset-manager.md). Once you have your images imported, you can add them as frames to a state of the Sprite Prefab. Single frame sprites and animated sprites are created and used the same way. If this is an animated sprite with multiple frames, you can preview the animation using ++space++ which will play/pause the animation starting from the currently selected frame in the properties table.
 
 ## Property Widgets
 
 <div class="grid" markdown>
 
-![Sprite Item Properties](../../img/editor/widgets-sprite.png) 
+![Sprite Prefab Properties](../../img/editor/widgets-sprite.png) 
 
 <div class="grid cards" markdown>
 

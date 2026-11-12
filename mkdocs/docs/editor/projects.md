@@ -31,8 +31,8 @@ To create a new Project in the Project Explorer you can:
 
 <div class="grid cards" markdown>
 
-- :material-numeric-1-circle:{.hyindicator}ㅤAll currently open **Project**s ![Project Icon](../img/editor/Project.png) are shown in the tree view here. Nested beneath each **Project** are the prefix folders containing the **Project Items**. The currently active project is shown with the ![Project Active Icon](../img/editor/Project-Pending.png) sub-icon.  
-- :material-numeric-2-circle:{.hyindicator}ㅤYou can drag **Project Items** between entirely different game **Projects** to copy them. This will include importing any required assets into the target project.  
+- :material-numeric-1-circle:{.hyindicator}ㅤAll currently open **Project**s ![Project Icon](../img/editor/Project.png) are shown in the tree view here. Nested beneath each **Project** are the prefix folders containing any created **Prefabs** or **Entities**. The currently active project is shown with the ![Project Active Icon](../img/editor/Project-Pending.png) sub-icon.  
+- :material-numeric-2-circle:{.hyindicator}ㅤYou can drag **Prefabs** between entirely different game **Projects** to copy them. This will include importing any required assets into the target project.  
 - :material-numeric-3-circle:{.hyindicator}ㅤThe search box allows you to filter the visible **Project Items** in the tree view. You can also filter by item type by selecting the corresponding icon.
 
 </div>
@@ -62,7 +62,7 @@ When the mouse cursor is over the game window, it will show the operating system
 
 <div class="grid cards" markdown>
 - **Number of Input Maps**  
-Input Maps take all the actions the player can perform and assigns inputs to them. You generally set the number of input maps equal to the number of local players your game supports. Each player will have their own input map.  
+Input Maps take all the actions the player can perform and assigns inputs to them. You generally set the number of input maps equal to the number of local players (on same device) your game supports. Each player will have their own input map.  
 - **Pixels Per Meter**  
 Sets the scale of the physics simulation. This value defines how many pixels in the game world correspond to one meter in the physics engine. Adjusting this value can affect the feel of movement and collisions in your game.  
 - **Gravity**  

@@ -75,9 +75,9 @@ hide:
 <div class="features-grid">
 
   <div class="feature-card">
-    <h3><b>HyEditor</b> - Design Tool</h3>
+    <h3><b style="color: #FA5A0A;">HyEditor</b></h3>
     <p class="center">
-      All of Harmony's tools are wrapped into the HyEditor. From project management, asset pipelines, and creating scene prefabs and entities.
+      Visually create Prefabs which are the building blocks of your game. All of Harmony's tools are wrapped into HyEditor to handle project & build management, the asset pipeline, and creating Prefabs and Entities.
     </p>
 	<div class="center-buttons">
 	  <a href="editor/">Editor Manual</a>
@@ -85,9 +85,9 @@ hide:
   </div>
 
   <div class="feature-card">
-    <h3><b>HyEngine</b> - Programming the Runtime</h3>
+    <h3><b style="color: #FA5A0A;">HyEngine</b></h3>
     <p class="center">
-      Understand how Harmony’s runtime API and how it works under the hood. Scene nodes, windows, cameras, input, rendering, the game loop and more.
+      Programming with Harmony’s runtime API and how it works under the hood. Integrate your game's logic with Prefab node instances, and setup windows, cameras, input, rendering, and more.
     </p>
 	<div class="center-buttons">
 	  <a href="programming/">Programming Manual</a>

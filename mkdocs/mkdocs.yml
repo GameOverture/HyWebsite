@@ -84,21 +84,19 @@ nav:
       - getting-started/index.md
       - 🔶Installation & Setup: getting-started/install.md
       - 🔶First Project: getting-started/first-project.md
-      - 🔶Programming Quickstart: getting-started/programming-quickstart.md
   - Editor Manual:
       - editor/index.md
       - 🔶Projects: editor/projects.md
       - 🔶Asset Manager: editor/asset-manager.md
-      - 🔶Project Items:
-          - editor/items/index.md
-          - 🔸Sprites: editor/items/sprites.md
-          - 🔸Text: editor/items/text.md
-          - 🔸Tile Map: editor/items/tilemaps.md
-          - 🔸Particles: editor/items/particles.md
-          - 🔸Spine: editor/items/spine.md
-          - 🔸Prefabs: editor/items/prefabs.md
-          - 🔸Audio: editor/items/audio.md
-          - 🔸Entity: editor/items/entities.md
+      - 🔶Prefabs:
+          - editor/prefabs/index.md
+          - 🔸Sprites: editor/prefabs/sprites.md
+          - 🔸Text: editor/prefabs/text.md
+          - 🔸Particles: editor/prefabs/particles.md
+          - 🔸Spine: editor/prefabs/spine.md
+          - 🔸Models: editor/prefabs/models.md
+          - 🔸Audio: editor/prefabs/audio.md
+      - 🔶Entities: editor/entities.md
       - 🔶TileSets: editor/tilesets.md
   - Programming Manual:
       - programming/index.md

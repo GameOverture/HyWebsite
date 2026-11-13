@@ -6,23 +6,23 @@ Programming the game logic, or implementing the "scene management" of your game 
 
 <div class="grid cards" markdown>
 
--   [:simple-dwavesystems:{.hyindicator}ㅤ**Item Nodes**](./item-nodes.md)
+-   [:simple-dwavesystems:{.hyindicator}ㅤ**Nodes**](./nodes.md)
 
     ---
 
-    These nodes are the components that can be assembled to create more complex objects or used independently. The [Project Items](../../editor/items/index.md) made the in the **HyEditor** are used to initialize these nodes. Each node type have similar construction and usage patterns, but are specialized for different tasks.
+    These nodes are the components that can be assembled to create more complex objects or used independently. The [Prefabs](../../editor/prefabs/index.md) made the in the **HyEditor** are used to initialize these nodes. Each node type have similar construction and usage patterns, but are specialized for different tasks.
 
--   [:simple-codeblocks:{.hyindicator}ㅤ**Entities & Physics**](./entities.md)
+-   [:simple-codeblocks:{.hyindicator}ㅤ**Entities**](./entities.md)
 
     ---
 
-    Special scene nodes that are able to group multiple **Item Nodes** together to represent objects or ideas. Only these nodes are able to detect input or collisions, and apply physics. Custom classes are derived from `HyEntity2d` to implement their own logic.
+    Special scene nodes that are able to group multiple **Prefabs** together to represent objects or ideas. Only these nodes are able to detect input or collisions, and apply physics. Custom classes are derived from `HyEntity2d` to implement their own logic.
 
 -   [:material-widgets:{.hyindicator}ㅤ**User Interface**](./user-interface.md)
 
     ---
 
-    A suite of nodes specifically built to accomplish user interface tasks. UI widgets like labels, buttons, meters, and more are constructed with **Item Nodes** and able to be arranged and sized within flexible layouts. The entire UI suite is built from `HyEntity2d` scene nodes.
+    A suite of extended `HyEntity2d` nodes specifically built to accomplish user interface tasks. UI widgets like labels, buttons, meters, and more can be constructed with existing **Prefabs** and able to be arranged and sized within flexible layouts. The entire UI suite is built from `HyEntity2d` scene nodes.
 
 </div>
 

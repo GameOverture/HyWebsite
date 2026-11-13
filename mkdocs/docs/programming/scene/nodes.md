@@ -1,11 +1,11 @@
-**Item Nodes** are provided C++ classes to create instances of the Editor's [Project Items](../../editor/items/index.md) such as Sprites, Text, TileMaps, etc. These nodes can be thought of as components to assemble [Entities](./entities.md). Every **Item Node** is apart of the same class hierarchy. 
+**Nodes** in HyEngine refer to the provided C++ class declarations of [Prefab](../../editor/prefabs/index.md) and [Entity](../../editor/entities.md) instances. These nodes can be thought of as components to assemble [Entities](./entities.md). Every **Item Node** is apart of the same class hierarchy. 
 
 ## Instantiating Nodes
 
 Constructing scene nodes follow a pseudo-RAII (Resource Acquisition Is Initialization) pattern. You can allocate nodes whereever without worrying about inserting them into the scene graph. Constructors take a `HyNodePath`(1) and optionally an Entity as the parent node.
 { .annotate }
 
-1.  A `HyNodePath` wraps a string to identify a [Project Item](../../editor/items/index.md) made in **HyEditor**. The string is a case-insensitive path of each prefix and name, delimted with `/`s. For example: `#!cpp "RootPrefix/SubPrefix/ItemName"`
+1.  A `HyNodePath` wraps a `std::string` to identify a [Prefab](../../editor/prefabs/index.md) made in **HyEditor**. The string is a case-insensitive path of each prefix and name, delimted with `/`s. For example: `#!cpp "RootPrefix/SubPrefix/ItemName"`
 
 ``` cpp
 // Dynamically allocate a sprite node without a parent
@@ -27,7 +27,7 @@ By default all nodes upon construction have:
 
 But they will not be considered "loaded"...
 
-The [Project Item](../../editor/items/index.md) used to initialize the Item Node may reference assets such as textures or audio that will need to be loaded. This needs to be explicitly done by calling the `Load()` function (or via an entity's `Load()` function that contains the node).
+The [Prefab](../../editor/prefabs/index.md) used to initialize the Node may reference assets such as textures or audio that will need to be loaded. This needs to be explicitly done by calling the `Load()` function (or via an entity's `Load()` function that contains the node).
 ``` cpp
 // Load the sprite's required assets asynchronously
 pSprite->Load();

@@ -103,7 +103,7 @@ nav:
       - 🔶Cameras & Windows: programming/cameras-windows.md
       - 🔶Scene Management:
           - programming/scene/index.md
-          - 🔸Item Nodes: programming/scene/item-nodes.md
+          - 🔸Nodes: programming/scene/nodes.md
           - 🔸Entities & Physics: programming/scene/entities.md
           - 🔸User Interface: programming/scene/user-interface.md
       - 🔶Input Handling: programming/input.md

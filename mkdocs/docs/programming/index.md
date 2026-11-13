@@ -127,7 +127,7 @@ public:
     }
     ```
 
--   [:material-graph-outline:{.hyindicator}ㅤ**Scene Management**](./scene/index.md) -> [Item Nodes](./scene/item-nodes.md) | [Entities & Physics](./scene/entities.md) | [User Interface](./scene/user-interface.md)  
+-   [:material-graph-outline:{.hyindicator}ㅤ**Scene Management**](./scene/index.md) -> [Item Nodes](./scene/nodes.md) | [Entities & Physics](./scene/entities.md) | [User Interface](./scene/user-interface.md)  
     The building blocks to make the game.
     ``` cpp
     case STATE_Spinning:

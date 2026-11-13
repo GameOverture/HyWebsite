@@ -71,7 +71,7 @@ Add new "blank" states by pressing the ![Add State Button](../../img/editor/gene
     ---
     Integrate 2D skeletal animations created with Spine, allowing for complex character animations with bones and meshes.
 
--   [![**Model Prefab**](../../img/editor/Prefab.png) Model Prefab](./prefabs.md)  
+-   [![**Model Prefab**](../../img/editor/Prefab.png) Model Prefab](./models.md)  
 
     ---
     Import GLTF 3D models that can be inserted into your scene's 2D display order as orthographic or perspective 3D objects.

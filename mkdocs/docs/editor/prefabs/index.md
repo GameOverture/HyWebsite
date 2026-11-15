@@ -13,6 +13,7 @@ Within the [Project Explorer](../projects.md#project-explorer), to create a new 
 - Press ++ctrl+n++, ++t++ to create a new ![New Text](../../img/editor/Text-New.png) Text  
 - Press ++ctrl+n++, ++f++ to create a new ![New Particles](../../img/editor/Particles-New.png) Particle FX  
 - Press ++ctrl+n++, ++i++ to create a new ![New Spine](../../img/editor/Spine-New.png) Spine  
+- Press ++ctrl+n++, ++m++ to create a new ![New Model](../../img/editor/Model-New.png) Model  
 - Press ++ctrl+n++, ++a++ to create a new ![New Audio](../../img/editor/Audio-New.png) Audio  
 
 You will be shown the "Add a new Prefab" dialog which will look like either of these:
@@ -71,7 +72,7 @@ Add new "blank" states by pressing the ![Add State Button](../../img/editor/gene
     ---
     Integrate 2D skeletal animations created with Spine, allowing for complex character animations with bones and meshes.
 
--   [![**Model Prefab**](../../img/editor/Prefab.png) Model Prefab](./models.md)  
+-   [![**Model Prefab**](../../img/editor/Model.png) Model Prefab](./models.md)  
 
     ---
     Import GLTF 3D models that can be inserted into your scene's 2D display order as orthographic or perspective 3D objects.

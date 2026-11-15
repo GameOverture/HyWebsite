@@ -83,7 +83,7 @@ The tabs below give overviews of the various types of built-in **Item Nodes**
 
 === "![Particle Effect](../../img/editor/Particles.png) Particles"
 
-=== "![Prefab](../../img/editor/Prefab.png) Prefab"
+=== "![Model](../../img/editor/Model.png) Model"
 
 === "![Audio](../../img/editor/Audio.png) Audio"
 

@@ -1,6 +1,6 @@
 ﻿Our goal here is to speedrun a simple game to cover some of Harmony Engine's major features. It assumes you have already done the steps in the [Installation & Setup](install.md) section.
 
-## Create the Project
+## 1. Create the Project
 
 With HyEditor open go to `File > New Project` from the main menu which opens the **New Project** dialog.
 
@@ -34,9 +34,9 @@ Once the build has fully generated you can click ![Open Build](../img/editor/Bui
     Adding or Removing files, creating folders, modifying code dependencies or other build settings should all be done within HyEditor. When changes are made in HyEditor it informs and updates CMake. Visual Studio will detect the change upon `Build Solution` and refresh.
 
 
-## Setup Assets
+## 2. Import Assets
 
-Download the following asset packs that will be used in this example:
+Download the following free asset packs that will be used in this example:
 <div class="grid cards" markdown>
 
 -   [:material-palette-outline:{.hyindicator}ㅤ**Flappy Bird Assets**](https://megacrash.itch.io/flappy-bird-assets)  
@@ -50,6 +50,8 @@ Download the following asset packs that will be used in this example:
 
 You can extract the zip files anywhere on your PC. The assets will be copied into the project when importing below (no longer referencing the original location).
 
+<center><h3>Player Assets</h3></center>
+
 Continuing with the [Asset Manager](../editor/asset-manager.md), click the ![Atlas Icon](../img/editor/atlas-file.png) Atlases tab within it.
 
 Press the ![Import Sprite Sheet Icon](../img/editor/slice-sprite-sheet.png) button at the bottom to **Import a Sprite Sheet**
@@ -61,13 +63,79 @@ Press the ![Import Sprite Sheet Icon](../img/editor/slice-sprite-sheet.png) butt
 </figure>
 
 - Click `Browse..` and locate the extracted `Flappy Bird Assets/Player` directory and choose from either style, selecting either `AllBird1.png` or `AllBird2.png`
+- Rename "Filter name" to `Player`
 - Change the Tile Size X and Y to be `16`
+- Rename "Frames' base name" to be `Player`
 - You can zoom/pan the preview window with ++w++ ++a++ ++s++ ++d++ and ++middle-button++ :material-mouse-scroll-wheel:
-- Press OK, and confirm importing assets.
+- Press OK, and confirm importing 28 assets.
 </div>
 
+You should now have a new filter in the tree view called `Player` that contains the 28 sliced images.
 
-## Create the Prefabs
+!!! tip annotate "Specify where new assets and filters get placed into"
+    In the Asset Manager, what you have selected determines where new items are placed into. To place new items to the root (and not within the `Player` filter) make sure to deselect all items by clicking an empty region in the Atlas Manager's tree view. (1)
 
-## Write the Game
+1. ![Import Clear Tip](../img/getting-started/flappy-import-cleartip.gif)
+
+<center><h3>Pipe Assets</h3></center>
+
+Within the [Asset Manager](../editor/asset-manager.md), right-Click :material-mouse-right-click: an empty region in the tree view and select "![Create Filter](../img/editor/Filter-New.png) Add Filter" in the context menu. Name it `Pipes`, press OK, then select the newly created filter by clicking it.
+
+Press the ![Import Sprite Sheet Icon](../img/editor/slice-sprite-sheet.png) button again, but this time we'll need to adjust the slicing options. Starting with slicing the **Tops**.
+
+<div class="grid" markdown>
+<figure>
+  <img src="../img/getting-started/flappy-import-pipetops.gif">
+  <figcaption></figcaption>
+</figure>
+
+- Click `Browse..` and locate the extracted `Flappy Bird Assets/Tiles` directory and choose a style, selecting either `PipeStyle1.png`, or `PipeStyle2.png`, etc.
+- Rename "Filter name" and "Frames' base name" to be `Tops`
+- Depending on which style you choose your slicing options will vary.
+
+!!! tip "Setting Slicing Options"
+    You can use your mouse wheel :material-mouse-scroll-wheel: to change slicing option values and preview the changes quickly.
+</div>
+
+Select the `Pipes` filter you created earlier and repeat the ![Import Sprite Sheet Icon](../img/editor/slice-sprite-sheet.png) process for the **Bodies** and then **Bottoms**. For `PipeStyle1.png`, the slicing options values are shown here:
+<div class="grid" markdown>
+![Import Sprite Sheet Icon](../img/getting-started/flappy-import-pipebodies.png)
+
+![Import Sprite Sheet Icon](../img/getting-started/flappy-import-pipebottoms.png)
+</div>
+
+<center><h3>Ground Assets</h3></center>
+
+Within the [Asset Manager](../editor/asset-manager.md), right-Click :material-mouse-right-click: an empty region in the tree view and select "![Import Sprite Sheet Icon](../img/editor/slice-sprite-sheet.png) Import Sprite Sheet(s)" in the context menu.
+
+<div class="grid" markdown>
+<figure>
+  <img src="../img/getting-started/flappy-import-ground.png">
+  <figcaption></figcaption>
+</figure>
+
+- Click `Browse..` and locate the extracted `Flappy Bird Assets/Tiles` directory and choose a style, selecting either `SimpleStyle1.png`, or `SimpleStyle2.png`, etc.
+- Rename "Filter name" and "Frames' base name" to be `Ground`
+- Depending on which style you choose your slicing options will vary.
+</div>
+
+<center><h3>Background Assets</h3></center>
+
+<div class="grid" markdown>
+Within the [Asset Manager](../editor/asset-manager.md), right-Click :material-mouse-right-click: an empty region in the tree view and select "![Create Filter](../img/editor/Filter-New.png) Add Filter" in the context menu. Name it `Backgrounds`, press OK, then select the newly created filter by clicking it.
+<br><br>
+The backgrounds are individual images so we can simply press the ![Import Images](../img/editor/AtlasFrame.png) button, browse to the extracted `Flappy Bird Assets\Background` directory and select 1 or more background images that you want.
+<br><br>
+This example is going to cycle day and nights as a run progresses using images: `Background1.png`, `Background2.png`, `Background3.png`, `Background4.png`, `Background5.png`, and `Background6.png`
+
+<figure>
+  <img src="../img/getting-started/flappy-assets.png">
+  <figcaption>Your <a href="../editor/asset-manager.html">Asset Manager</a> should look something like this</figcaption>
+</figure>
+</div>
+
+## 3. Create the Prefabs
+
+
+## 4. Write the Game
 

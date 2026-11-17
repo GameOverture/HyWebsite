@@ -10,7 +10,7 @@ With HyEditor open go to `File > New Project` from the main menu which opens the
   <figcaption> See <a href="../editor/projects.html#creating-a-new-project">Projects</a> section for more information</figcaption>
 </figure>
 
-- Type the **Game Title** that you want, in our example it's "Flappy". The **Code Name** will update automatically to match, and will be used to name the main C++ class.
+- Type the **Game Title** that you want, in this example it's "Flappy". The **Code Name** will update automatically to match, and will be used to name the main C++ class.
 - Specify where you want this to game reside on your PC using **Project Location** and leave the rest default.
 - Press OK
 </div>
@@ -136,6 +136,120 @@ This example is going to cycle day and nights as a run progresses using images: 
 
 ## 3. Create the Prefabs
 
+Prefabs are used to initalize components like sprites and text when programming the game. They are created and arranged into *prefixes*(1) in the [Project Explorer](../editor/projects.md#project-explorer) window.
+{ .annotate }
+
+1. Prefixes are a folder hierarchy that can be used to organize [Prefabs](../editor/prefabs/index.md) and [Entities](../editor/entities.md) into logical groups and help avoid name clashing. The full path includes the prefix and name, creating a string that is case-insensitive, delimited with `/`s. For example: "RootPrefix/SubPrefix/PrefabName"
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+<center><h3>Player Prefab</h3></center>
+
+<div class="grid" markdown>
+
+- Right-click :material-mouse-right-click: on your active project ![Active Project Icon](../img/editor/Project-Pending.png) **Flappy**
+- Select **New Item**→![New Sprite Icon](../img/editor/Sprite-New.png) **New Sprite** in the context menu
+- Set the "Sprite Name" to be `Player`, and leave the rest default
+- Press OK
+
+<figure>
+  <img src="../img/getting-started/flappy-new-sprite.png">
+  <figcaption>Not setting a prefix will place it in the root, and its path is just the name "Player"</figcaption>
+</figure>
+
+</div>
+
+
+
+<div class="grid" markdown>
+
+- Choose a color among the imported player frames within the [Asset Manager](../editor/asset-manager.md)
+- The ![Sprite Icon](../img/editor/Sprite.png) **Player** sprite is going to have three states: `Idle`, `Flap`, and `Bonk`
+
+<figure>
+  <img src="../img/getting-started/flappy-player-state.png">
+  <figcaption>Begin by renaming state '0' to `Idle`</figcaption>
+</figure>
+
+</div>
+
+<figure>
+  <img src="../img/getting-started/flappy-player-idle.gif">
+  <figcaption>Drag the first 2 player frames from the chosen color into the main window</figcaption>
+</figure>
+
+<figure>
+  <img src="../img/getting-started/flappy-player-idlesettings.gif">
+  <figcaption>Check the Looping checkbox, and set the Frame Rate to <code>0.250sec</code></figcaption>
+</figure>
+
+<figure>
+  <img src="../img/getting-started/flappy-player-flap.gif">
+  <figcaption>Create the <code>Flap</code> state, drag all 4 frames into the main window, check the Bounce checkbox, and set the Frame Rate to <code>0.050sec</code></figcaption>
+</figure>
+
+<figure>
+  <img src="../img/getting-started/flappy-player-bonk.gif">
+  <figcaption>Finally create the <code>Bonk</code> state, drag all 4 frames into the main window again, check the Looping checkbox, and crank up the Frame Rate</figcaption>
+</figure>
+
+!!! tip "Save your work"
+    Be sure to **File**→![Save Icon](../img/editor/file-save.png) **Save** or press ++ctrl++ + ++s++ when you make changes to Prefabs
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+<center><h3>Pipe Prefabs</h3></center>
+
+Creating the pipe Prefabs will be a little different. Pipes will be assembled between three Prefabs `Top`, `Body`, and `Bottom`, where each state will correspond to a color.
+
+- Right-click :material-mouse-right-click: on your active project ![Active Project Icon](../img/editor/Project-Pending.png) Flappy
+- Select **New Item**→![New Prefix Icon](../img/editor/Prefix-New.png) **New Prefix** in the context menu
+- Set the "Prefix Name" to be `Pipes`, and leave the rest default, and press OK
+
+<br>
+
+<div class="grid" markdown>
+
+- Now right-click :material-mouse-right-click: on the newly created ![Prefix Icon](../img/editor/Prefix.png) **Pipes** prefix
+    - Select **New Item**→![New Sprite Icon](../img/editor/Sprite-New.png) **New Sprite** in the context menu
+- Set the "Sprite Name" (`Top`, `Body`, or `Bottom`), the Prefix will already have `Pipes` set since our context menu was invoked from it
+- Press OK
+
+<figure>
+  <img src="../img/getting-started/flappy-pipe-prefabs.png">
+  <figcaption></figcaption>
+</figure>
+</div>
+
+<div class="grid" markdown>
+
+- Within [Asset Manager](../editor/asset-manager.md)'s tree view, the ![Filter Icon](../img/editor/Filter.png) **Pipes** filter has a sub-filter for each pipe Prefab `Top`, `Body`, and `Bottom`
+- Drag a single corresponding pipe frame into the main view and then create a new state, repeating for each color
+    - Should be 8 states total (0-7)
+    - Make sure to keep the state/color order between the three pipe Prefabs the same
+
+<figure>
+  <img src="../img/getting-started/flappy-pipe-creation.gif">
+  <figcaption>Repeat this process three times in the Pipes prefix creating <b>Body</b>, <b>Bottom</b> and <b>Top</b></figcaption>
+</figure>
+
+</div>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+<center><h3>Text Prefab</h3></center>
+
+
+
+<div class="grid" markdown>
+<figure>
+  <img src="../img/getting-started/flappy-new-text.png">
+  <figcaption>Not setting a prefix will place it in the root, and its path is just the name "Menu"</figcaption>
+</figure>
+
+- Right-click :material-mouse-right-click: on your active project ![Active Project Icon](../img/editor/Project-Pending.png) Flappy
+- Select **New Item**→![New Text Icon](../img/editor/Text-New.png) **New Text** in the context menu
+- Set the "Text Name" to be `Menu`, and leave the rest default
+- Press OK
+</div>
 
 ## 4. Write the Game
 

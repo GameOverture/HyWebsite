@@ -5,7 +5,7 @@
 Constructing scene nodes follow a pseudo-RAII (Resource Acquisition Is Initialization) pattern. You can allocate nodes whereever without worrying about inserting them into the scene graph. Constructors take a `HyNodePath`(1) and optionally an Entity as the parent node.
 { .annotate }
 
-1.  A `HyNodePath` wraps a `std::string` to identify a [Prefab](../../editor/prefabs/index.md) made in **HyEditor**. The string is a case-insensitive path of each prefix and name, delimted with `/`s. For example: `#!cpp "RootPrefix/SubPrefix/ItemName"`
+1.  A `HyNodePath` wraps a `std::string` to identify a [Prefab](../../editor/prefabs/index.md) made in **HyEditor**. The string is a case-insensitive path of each prefix and name, delimited with `/`s. For example: `#!cpp "RootPrefix/SubPrefix/ItemName"`
 
 ``` cpp
 // Dynamically allocate a sprite node without a parent

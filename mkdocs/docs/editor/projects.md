@@ -26,8 +26,13 @@ To create a new Project in the Project Explorer you can:
 
 <figure>
   <img src="../img/editor/project_explorer.png" alt="Project Explorer Dock Window">
-  <figcaption>Folders within <strong>Project Explorer</strong> are often referred as <em>Prefixes</em>.</figcaption>
+  <figcaption></figcaption>
 </figure>
+
+Folders within <strong>Project Explorer</strong> are often referred as <em>Prefixes</em>(1)
+{ .annotate }
+
+1. Prefixes are a folder hierarchy that can be used to organize [Prefabs](../editor/prefabs/index.md) and [Entities](../editor/entities.md) into logical groups and help avoid name clashing. The full path includes the prefix and name, creating a string that is case-insensitive, delimited with `/`s. For example: "RootPrefix/SubPrefix/PrefabName"
 
 <div class="grid cards" markdown>
 

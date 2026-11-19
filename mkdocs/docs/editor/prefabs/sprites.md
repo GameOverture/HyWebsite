@@ -1,6 +1,6 @@
 ﻿Sprite Prefabs are used to display textured quads in 2D or 3D space. To get started with sprites, you need to have imported images into the ![Atlases Icon](../../img/editor/atlas-file.png)**Atlases** section of the [Asset Manager](../asset-manager.md). Once you have your images imported, you can add them as frames to a state of the Sprite Prefab. Single frame sprites and animated sprites are created and used the same way. If this is an animated sprite with multiple frames, you can preview the animation using ++space++ which will play/pause the animation starting from the currently selected frame in the properties table.
 
-## Property Widgets
+## Properties
 
 <div class="grid" markdown>
 
@@ -22,11 +22,11 @@
 </div>
 </div>
 
-## Sprite Origin & Frame Offsets
+## Origin & Frame Offsets
 
 The white origin (or pivot point) in the center render window is the point around which the sprite will position, rotate, and scale its frames in the game. By default, any newly added frames start centered at the origin, but you can change it by adjusting the *Offset* values for each frame in the frame list.
 
-To more easily set the *Offset* for the frames, you can use any of the alignment buttons located above the frame list, or :material-mouse-left-click:++left-button++ on the preview and drag the frame in the Middle Render Window.
+To more easily set the *Offset* for the frames, you can use any of the alignment buttons located above the frame list, or :material-mouse-left-click:++left-button++ on the preview and drag the frame in the Middle Render Window. You can also nudge the *Offset* by single pixels using the arrow keys ++left++ ++right++ ++up++ ++down++
 
 ![Sprite Offseting Gif](../../img/editor/sprite-offsetting.gif)
 

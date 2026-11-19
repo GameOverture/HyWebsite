@@ -237,7 +237,7 @@ Creating the pipe Prefabs will be a little different. Pipes will be assembled be
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 <center><h3>Text Prefab</h3></center>
 
-
+Creating Text Prefabs use the installed fonts on your PC. Compatible fonts are most .ttf (TrueType Fonts) and some .otf (OpenType Font).
 
 <div class="grid" markdown>
 <figure>

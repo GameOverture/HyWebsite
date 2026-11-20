@@ -96,8 +96,8 @@ nav:
           - 🔸Spine: editor/prefabs/spine.md
           - 🔸Models: editor/prefabs/models.md
           - 🔸Audio: editor/prefabs/audio.md
-      - 🔶Entities: editor/entities.md
       - 🔶TileSets: editor/tilesets.md
+      - 🔶Entities: editor/entities.md
   - Programming Manual:
       - programming/index.md
       - 🔶Cameras & Windows: programming/cameras-windows.md

@@ -24,9 +24,9 @@
 
 ## Origin & Frame Offsets
 
-The white origin (or pivot point) in the center render window is the point around which the sprite will position, rotate, and scale its frames in the game. By default, any newly added frames start centered at the origin, but you can change it by adjusting the *Offset* values for each frame in the frame list.
+The white origin lines (or pivot point) in the center render window is the anchor point around which the sprite will position, rotate, and scale in the game. By default, any newly added frames start centered at the origin, but you can change it by adjusting the *Offset* values for each frame in the frame list.
 
-To more easily set the *Offset* for the frames, you can use any of the alignment buttons located above the frame list, or :material-mouse-left-click:++left-button++ on the preview and drag the frame in the Middle Render Window. You can also nudge the *Offset* by single pixels using the arrow keys ++left++ ++right++ ++up++ ++down++
+To more easily set the *Offset* for the frames, you can use any of the alignment buttons ![Align Left](../../img/editor/sprite-alignLeft.png)![Align Bottom](../../img/editor/sprite-alignBottom.png)![Align Top](../../img/editor/sprite-alignRight.png)![Align Top](../../img/editor/sprite-alignUp.png)![Align HCenter](../../img/editor/sprite-alignHorzCenter.png)![Align VCenter](../../img/editor/sprite-alignVertCenter.png), or :material-mouse-left-click:++left-button++ on the preview and drag the frame in the Middle Render Window. You can also nudge the *Offset* by single pixels using the arrow keys ++left++ ++right++ ++up++ ++down++
 
 ![Sprite Offseting Gif](../../img/editor/sprite-offsetting.gif)
 

@@ -1,6 +1,6 @@
 ﻿Our goal here is to speedrun a simple game to cover some of Harmony Engine's major features. It assumes you have already done the steps in the [Installation & Setup](install.md) section.
 
-## 1. Create the Project
+## 1. Create Project
 
 With HyEditor open go to `File > New Project` from the main menu which opens the **New Project** dialog.
 
@@ -17,9 +17,8 @@ With HyEditor open go to `File > New Project` from the main menu which opens the
 
 The ![Flappy Project Icon](../img/editor/Project.png) Flappy project should now appear in the [Project Explorer](../editor/projects.md#project-explorer) window. Click the project to activate it ![Activated Flappy Project Icon](../img/editor/Project-Pending.png).
 
-<center>
-<h3>Generate a build<h3>
-</center>
+---
+<center><h3>Generate a build<h3></center>
 
 With your project activated the [Asset Manager](../editor/asset-manager.md) (and everything else) will now be linked to this project. Click the ![Code Icon](../img/editor/code.png) Code tab within it.
 
@@ -50,6 +49,7 @@ Download the following free asset packs that will be used in this example:
 
 You can extract the zip files anywhere on your PC. The assets will be copied into the project when importing below (no longer referencing the original location).
 
+---
 <center><h3>Player Assets</h3></center>
 
 Continuing with the [Asset Manager](../editor/asset-manager.md), click the ![Atlas Icon](../img/editor/atlas-file.png) Atlases tab within it.
@@ -77,6 +77,7 @@ You should now have a new filter in the tree view called `Player` that contains 
 
 1. ![Import Clear Tip](../img/getting-started/flappy-import-cleartip.gif)
 
+---
 <center><h3>Pipe Assets</h3></center>
 
 Within the [Asset Manager](../editor/asset-manager.md), right-Click :material-mouse-right-click: an empty region in the tree view and select "![Create Filter](../img/editor/Filter-New.png) Add Filter" in the context menu. Name it `Pipes`, press OK, then select the newly created filter by clicking it.
@@ -104,6 +105,7 @@ Select the `Pipes` filter you created earlier and repeat the ![Import Sprite She
 ![Import Sprite Sheet Icon](../img/getting-started/flappy-import-pipebottoms.png)
 </div>
 
+---
 <center><h3>Ground Assets</h3></center>
 
 Within the [Asset Manager](../editor/asset-manager.md), right-Click :material-mouse-right-click: an empty region in the tree view and select "![Import Sprite Sheet Icon](../img/editor/slice-sprite-sheet.png) Import Sprite Sheet(s)" in the context menu.
@@ -119,6 +121,7 @@ Within the [Asset Manager](../editor/asset-manager.md), right-Click :material-mo
 - Depending on which style you choose your slicing options will vary.
 </div>
 
+---
 <center><h3>Background Assets</h3></center>
 
 <div class="grid" markdown>
@@ -134,14 +137,15 @@ This example is going to cycle day and nights as a run progresses using images: 
 </figure>
 </div>
 
-## 3. Create the Prefabs
+## 3. Setup Prefabs
 
 Prefabs are used to initalize components like sprites and text when programming the game. They are created and arranged into *prefixes*(1) in the [Project Explorer](../editor/projects.md#project-explorer) window.
 { .annotate }
 
-1. Prefixes are a folder hierarchy that can be used to organize [Prefabs](../editor/prefabs/index.md) and [Entities](../editor/entities.md) into logical groups and help avoid name clashing. The full path includes the prefix and name, creating a string that is case-insensitive, delimited with `/`s. For example: "RootPrefix/SubPrefix/PrefabName"
+1. Prefixes are a folder hierarchy that can be used to organize [Prefabs](../editor/prefabs/index.md) and [Entities](../editor/entities.md) into logical groups and help avoid name clashing. The full path includes the prefix and name, creating a string that is case-insensitive, delimited with `/` For example: "RootPrefix/SubPrefix/PrefabName"
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+---
 <center><h3>Player Prefab</h3></center>
 
 <div class="grid" markdown>
@@ -157,8 +161,6 @@ Prefabs are used to initalize components like sprites and text when programming 
 </figure>
 
 </div>
-
-
 
 <div class="grid" markdown>
 
@@ -179,23 +181,24 @@ Prefabs are used to initalize components like sprites and text when programming 
 
 <figure>
   <img src="../img/getting-started/flappy-player-idlesettings.gif">
-  <figcaption>Check the Looping checkbox, and set the Frame Rate to <code>0.250sec</code></figcaption>
+  <figcaption>Check the <b>Looping</b> checkbox, and set the Frame Rate to <code>0.250sec</code></figcaption>
 </figure>
 
 <figure>
   <img src="../img/getting-started/flappy-player-flap.gif">
-  <figcaption>Create the <code>Flap</code> state, drag all 4 frames into the main window, check the Bounce checkbox, and set the Frame Rate to <code>0.050sec</code></figcaption>
+  <figcaption>Create the <code>Flap</code> state, drag all 4 frames into the main window, check the <b>Bounce</b> checkbox, and set the Frame Rate to <code>0.050sec</code></figcaption>
 </figure>
 
 <figure>
   <img src="../img/getting-started/flappy-player-bonk.gif">
-  <figcaption>Finally create the <code>Bonk</code> state, drag all 4 frames into the main window again, check the Looping checkbox, and crank up the Frame Rate</figcaption>
+  <figcaption>Finally create the <code>Bonk</code> state, drag all 4 frames into the main window again, check the <b>Looping</b> checkbox, and crank up the Frame Rate</figcaption>
 </figure>
 
 !!! tip "Save your work"
     Be sure to **File**→![Save Icon](../img/editor/file-save.png) **Save** or press ++ctrl++ + ++s++ when you make changes to Prefabs
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+---
 <center><h3>Pipe Prefabs</h3></center>
 
 Creating the pipe Prefabs will be a little different. Pipes will be assembled between three Prefabs `Top`, `Body`, and `Bottom`, where each state will correspond to a color.
@@ -233,8 +236,21 @@ Creating the pipe Prefabs will be a little different. Pipes will be assembled be
 
 </div>
 
+<!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+---
+<center><h3>Background Prefab</h3></center>
+
+Create a Sprite Prefab for the `Background`. Just like one of the pipe parts, make a state for each background image.
+
+Additionally, set the offset for each state to be anchored at the bottom left (`0, 0`) by pressing the ![Align Left](../img/editor/sprite-alignLeft.png) and ![Align Bottom Icon](../img/editor/sprite-alignLeft.png) buttons.
+
+<figure>
+  <img src="../img/getting-started/flappy-backgrounds.png">
+  <figcaption>There's 6 total states (0-5) for the Background Prefab in this example</figcaption>
+</figure>
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+---
 <center><h3>Text Prefab</h3></center>
 
 Creating Text Prefabs use the installed fonts on your PC. Compatible fonts are most .ttf (TrueType Fonts) and some .otf (OpenType Font).
@@ -251,5 +267,11 @@ Creating Text Prefabs use the installed fonts on your PC. Compatible fonts are m
 - Press OK
 </div>
 
-## 4. Write the Game
+## 4. Setup Entities
+
+Right-click :material-mouse-right-click: on your active project ![Active Project Icon](../img/editor/Project-Pending.png) Flappy and **New Item**→![New Prefix Icon](../img/editor/Prefix-New.png) **New Prefix** called `Scenes`
+
+Within the ![Prefix Icon](../img/editor/Prefix.png) **Scenes** prefix, create a ![New Entity Icon](../img/editor/Entity-New.png) **New Entity** called `Gameplay`
+
+## 5. Programming the Game
 

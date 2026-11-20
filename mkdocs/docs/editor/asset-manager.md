@@ -22,30 +22,32 @@
 -   :material-numeric-3-circle:{.hyindicator}ㅤAlong the bottom are the tool buttons that allow you to manage your assets:
 
     === "![CodeIcon](../img/editor/code.png) Code"
-        - ![New Class](../img/editor/Source-New.png): Add a new C++ class.
-        - ![New Filter](../img/editor/Filter-New.png): Create new filter, which is **actually** creating a folder on your disk to organize your source code.
-        - ![Import](../img/editor/Source.png): Import already existing code files from a single directory.
-        - ![Import Dir](../img/editor/Source-Open.png): Import already existing code files from a directory and its subdirectories.
-        - ![Replace](../img/editor/atlas-replaceFrame.png): Replace selected source code files by selecting the same number of different, existing files.
-        - ![Delete](../img/editor/edit-delete.png): Delete selected source code files.
+        - ![New Filter](../img/editor/Filter-New.png): Create new filter, which is **actually** creating a folder on your disk to organize your source code
+        - ![Import](../img/editor/Source.png): Import already existing code files from a single directory
+        - ![Import Dir](../img/editor/Source-Open.png): Import already existing code files from a directory and its subdirectories
+        - ![New Class](../img/editor/Source-New.png): Add a new C++ class
+        - ![Replace](../img/editor/atlas-replaceFrame.png): Replace selected source code files by selecting the same number of different, existing files
+        - ![Delete](../img/editor/edit-delete.png): Delete selected source code files
         !!! warning
             These actions do not use an undo/redo system
 
     === "![AtlasIcon](../img/editor/atlas-file.png) Atlases"
-        - ![New Filter](../img/editor/Filter-New.png): Create new filter, which is essentially a folder to organize your images within a bank.
-        - ![Import](../img/editor/AtlasFrame.png): Import specified PNG image files from a single directory.
-        - ![Import Dir](../img/editor/AtlasFrame-Open.png): Import all PNG image files from a directory and its subdirectories.
-        - ![Replace](../img/editor/atlas-replaceFrame.png): Replace selected images by selecting the same number of new assets.
-        - ![Delete](../img/editor/edit-delete.png): Delete selected images.
+        - ![New Filter](../img/editor/Filter-New.png): Create new filter, which is essentially a folder to organize your images within a bank
+        - ![Import](../img/editor/AtlasFrame.png): Import specified PNG image files from a single directory
+        - ![Import Dir](../img/editor/AtlasFrame-Open.png): Import all PNG image files from a directory and its subdirectories
+        - ![Sprite Sheet](../img/editor/slice-sprite-sheet.png): Slice up an existing sprite sheet and import its images
+        - ![New TileSet](../img/editor/TileSet-New.png): Create a new [TileSet](tilesets.md) asset used by Entity TileMaps
+        - ![Replace](../img/editor/atlas-replaceFrame.png): Replace selected images by selecting the same number of new assets
+        - ![Delete](../img/editor/edit-delete.png): Delete selected images
         !!! warning
             These actions do not use an undo/redo system
 
     === "![AudioIcon](../img/editor/audio-manager.png) Audio"
-        - ![New Filter](../img/editor/Filter-New.png): Create new filter, which is essentially a folder to organize your sounds within a bank.
-        - ![Import](../img/editor/SoundClip.png): Import specified WAV sound files from a single directory.
-        - ![Import Dir](../img/editor/SoundClip-Open.png): Import all WAV sound files from a directory and its subdirectories.
-        - ![Replace](../img/editor/atlas-replaceFrame.png): Replace selected sound WAVs by selecting the same number of new assets.
-        - ![Delete](../img/editor/edit-delete.png): Delete selected sounds.
+        - ![New Filter](../img/editor/Filter-New.png): Create new filter, which is essentially a folder to organize your sounds within a bank
+        - ![Import](../img/editor/SoundClip.png): Import specified WAV sound files from a single directory
+        - ![Import Dir](../img/editor/SoundClip-Open.png): Import all WAV sound files from a directory and its subdirectories
+        - ![Replace](../img/editor/atlas-replaceFrame.png): Replace selected sound WAVs by selecting the same number of new assets
+        - ![Delete](../img/editor/edit-delete.png): Delete selected sounds
         !!! warning
             These actions do not use an undo/redo system
 
@@ -120,3 +122,9 @@ Once you created a new build, it will appear in the combo box along in the "Buil
 - ![Open Build Button](../img/editor/Build-Open.png): Launches the IDE (or equivalent) of the selected build.
 - ![Package Build Button](../img/editor/package-x-generic.png): Packages the selected build into a distributable format
 - ![Delete Build Button](../img/editor/Build-Delete.png): Deletes the selected build and all its generated files (this does not affect your source code files).
+
+!!! bug "Visual Studio 2026 does not properly set Startup Project"
+    The current version of Visual Studio 2026 does not respect CMake's `VS_STARTUP_PROJECT` property and when generating the solution, **HyEngine** might be set as the Startup Project resulting in this error when you try to run it:  
+    <center>![Startup Project Error](../img/editor/dlg-startupproject.png)</center>  
+    To resolve, :material-mouse-right-click:++right-button++ on your game project within **Solution Explorer** and select "Set as Startup Project" in the context menu.
+

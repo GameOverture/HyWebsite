@@ -3,7 +3,7 @@
 To create a new Project in the Project Explorer you can:
 
 - Click the ![New Project Button](../img/editor/Project-New.png) button along the top tool bar
-- `File > New Project` from the menu
+- **File**→![New Project Button](../img/editor/Project-New.png) **New Project** from the menu
 - Press ++ctrl+shift+n++
 
 <div class="grid" markdown>
@@ -32,7 +32,7 @@ To create a new Project in the Project Explorer you can:
 Folders within <strong>Project Explorer</strong> are often referred as <em>Prefixes</em>(1)
 { .annotate }
 
-1. Prefixes are a folder hierarchy that can be used to organize [Prefabs](../editor/prefabs/index.md) and [Entities](../editor/entities.md) into logical groups and help avoid name clashing. The full path includes the prefix and name, creating a string that is case-insensitive, delimited with `/`s. For example: "RootPrefix/SubPrefix/PrefabName"
+1. Prefixes are a folder hierarchy that can be used to organize [Prefabs](../editor/prefabs/index.md) and [Entities](../editor/entities.md) into logical groups and help avoid name clashing. The full path includes the prefix and name, creating a string that is case-insensitive, delimited with `/` For example: "RootPrefix/SubPrefix/PrefabName"
 
 <div class="grid cards" markdown>
 

@@ -1,6 +1,12 @@
-Text Prefabs initialize instances of `HyText2d` nodes, which utilize bitmap fonts and are able to batch render along with `HySprite2d`'s and `HyTextureQuad2d`'s. Creating Text Prefabs with HyEditor use the installed fonts on your PC. 
+Text Prefabs initialize instances of `HyText` nodes, which utilize bitmap fonts and are able to batch render along with `HySprite2d`'s and `HyTextureQuad2d`'s. Creating Text Prefabs with HyEditor use the installed fonts on your PC.
 
-Compatible fonts are **.ttf** (TrueType Fonts) and most **.otf** (OpenType Font).
+HyEditor will scan your OS's standard location for available fonts. Creating Text Prefabs requires choosing a font file, and by default **System-wide** fonts installed on your PC and fonts found in the `<Project Location>/meta/Fonts` directory are available to choose from.  
+
+Compatible fonts are **.ttf** (TrueType Fonts) and most **.otf** (OpenType Fonts).
+!!! note "User-specific installed fonts will not be found"
+    Only system-wide fonts that are accessible to all user accounts will be available to choose from. If you want to use a downloaded font, be sure to "Install for all users", or manually place the font in the `<Project Location>/meta/Fonts` directory.
+
+
 
 ## Properties
 

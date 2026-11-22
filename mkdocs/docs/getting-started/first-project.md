@@ -40,11 +40,15 @@ Download the following free asset packs that will be used in this example:
 
 -   [:material-palette-outline:{.hyindicator}ㅤ**Flappy Bird Assets**](https://megacrash.itch.io/flappy-bird-assets)  
     Pixel Art by MegaCrash on itch.io<br>
-    ![Art Download Preview](../img/getting-started/flappy-art-download.png)
+    [![Art Download Preview](../img/getting-started/flappy-art-download.png)](https://megacrash.itch.io/flappy-bird-assets)
 
 -   [:material-volume-high:{.hyindicator}ㅤ**Impact Sounds!**](https://nvthicprod.itch.io/impact-sfx)  
     Sound Effects by Nvthic Sounds on itch.io<br>
-    ![Art Download Preview](../img/getting-started/flappy-sfx-download.png)
+    [![Sfx Download Preview](../img/getting-started/flappy-sfx-download.png)](https://nvthicprod.itch.io/impact-sfx)
+
+-   [:material-format-font:{.hyindicator}ㅤ**MANAspace font**](https://www.zone38.net/font/#mana)  
+    TrueType font by codeman38 on zone38.net<br>
+    [![Font Download Preview](../img/getting-started/flappy-font-download.png)](https://www.zone38.net/font/#mana)
 </div>
 
 You can extract the zip files anywhere on your PC. The assets will be copied into the project when importing below (no longer referencing the original location).
@@ -238,22 +242,34 @@ Creating the pipe Prefabs will be a little different. Pipes will be assembled be
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 ---
-<center><h3>Background Prefab</h3></center>
+<center><h3>Background & Ground Prefab</h3></center>
 
 Create a Sprite Prefab for the `Background`. Just like one of the pipe parts, make a state for each background image.
 
-Additionally, set the offset for each state to be anchored at the bottom left (`0, 0`) by pressing the ![Align Left](../img/editor/sprite-alignLeft.png) and ![Align Bottom Icon](../img/editor/sprite-alignLeft.png) buttons.
+Additionally, set the offset for each state to be anchored at the bottom left (`0, 0`) by pressing the ![Align Left](../img/editor/sprite-alignLeft.png) and ![Align Bottom Icon](../img/editor/sprite-alignBottom.png) buttons.
 
 <figure>
   <img src="../img/getting-started/flappy-backgrounds.png">
-  <figcaption>There's 6 total states (0-5) for the Background Prefab in this example</figcaption>
+  <figcaption>There's 6 total states (0-5) for the <code>Background</code> Prefab in this example</figcaption>
 </figure>
+
+Also Create a Sprite Prefab for the `Ground`. Offset each state to be anchored at the bottom left (`0, 0`). It will be have 2 states for each ground piece we sliced.
+
+<figure>
+  <img src="../img/getting-started/flappy-ground-prefab.png">
+  <figcaption>There's 2 total states (0-1) for the <code>Ground</code> Prefab in this example</figcaption>
+</figure>
+
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 ---
 <center><h3>Text Prefab</h3></center>
 
-Creating Text Prefabs use the installed fonts on your PC. Compatible fonts are most .ttf (TrueType Fonts) and some .otf (OpenType Font).
+HyEditor will scan your OS's standard location for available fonts. Creating Text Prefabs requires choosing a font file, and by default **System-wide** fonts installed on your PC and fonts found in the `<Project Location>/meta/Fonts` directory.  
+
+Compatible fonts are **.ttf** (TrueType Fonts) and most **.otf** (OpenType Fonts).
+!!! note "User-specific installed fonts will not be found"
+    Only system-wide fonts that are accessible to all user accounts will be available to choose from. If you want to use a downloaded font, be sure to "Install for all users", or manually place the font in the `<Project Location>/meta/Fonts` directory.
 
 <div class="grid" markdown>
 <figure>
@@ -267,11 +283,48 @@ Creating Text Prefabs use the installed fonts on your PC. Compatible fonts are m
 - Press OK
 </div>
 
+![Text Prefab Creation](../img/getting-started/flappy-text.png)
+
 ## 4. Setup Entities
+
+When programming, you can create one or many Node instances of the Prefabs that you just made. Entities (`HyEntity`) are a way you can logically combine these Nodes to represent more complex objects, entire levels, etc. By extending your own class from `HyEntity` you can implement your own logic on how it controls its child Nodes.
+
+When you create an entity in HyEditor you can visually preview what the class will look like after being loaded, and its members initialized.
 
 Right-click :material-mouse-right-click: on your active project ![Active Project Icon](../img/editor/Project-Pending.png) Flappy and **New Item**→![New Prefix Icon](../img/editor/Prefix-New.png) **New Prefix** called `Scenes`
 
-Within the ![Prefix Icon](../img/editor/Prefix.png) **Scenes** prefix, create a ![New Entity Icon](../img/editor/Entity-New.png) **New Entity** called `Gameplay`
+<div class="grid" markdown>
+
+- Within the ![Prefix Icon](../img/editor/Prefix.png) **Scenes** prefix, create a ![New Entity Icon](../img/editor/Entity-New.png) **New Entity** called `Gameplay`
+- Within the [Project Explorer](../editor//projects.md#project-explorer) drag and drop ![Sprite Icon](../img/editor/Sprite.png) **Background** into the main view to create a Node of that Prefab called `m_Background`
+- With `m_Background` Node selected, change the **Sprite** → "State" to `1` (the noon-daylight background)
+- Also change the **Sprite** → "Texture Tiling" to be `3 x 1`
+
+<figure>
+  <img src="../img/getting-started/flappy-entity-seam.png">
+  <figcaption>After tiling <code>m_Background</code> you will notice seams when it wraps</figcaption>
+</figure>
+</div>
+
+The seams in the tiling `m_Background` are due to texture filtering and atlas packing settings. By default assets are assigned `Bilinear` filtering, which samples the four nearest texels and calculates a weighted average to create a smooth gradient. The seams you are seeing on the edges are sampling the nearby transparent texels around the actual image (as it sits on the texture atlas).
+
+<figure>
+  <img src="../img/getting-started/texture-filters.png">
+  <figcaption>Filtering difference if you were to zoom into the texture's texels</figcaption>
+ </figure>
+
+
+1. Keep the `Bilinear` filtering
+    - Within the [Asset Manager](../editor/asset-manager.md) in the **Bank** groupbox, change the ![Settings Icon](../img/editor/generic-settings.png) **Atlas Bank Settings** → **Packing Options** → **Extrude Amount** to `1`
+    - Regenerate the Atlas Bank
+    - This makes the outermost texels of each atlas frame are duplicated into the surrounding padding area to prevent texture bleeding. In our case it will prevent `Bilinear` filtering from sampling transparent texels when tiling
+2. Change to `Nearest` filtering (recommended)  
+    - This filtering results in sharp, blocky, pixelated visuals which matches the intended art style, and also naturally avoids the problem all together
+    - ![Save Icon](../img/editor/file-save.png) Save all open items
+    - Within the [Asset Manager](../editor/asset-manager.md) in the tree view area, select all items (click in tree view then press ++ctrl++ + ++a++)
+    - Right-click :material-mouse-right-click: on the selected items and choose ![Asset Properties Icon](../img/editor/AtlasFrame-Settings.png) **Asset Properties**
+    - Change **Filtering** to `Nearest` and press OK
+    - Repack the assets
 
 ## 5. Programming the Game
 

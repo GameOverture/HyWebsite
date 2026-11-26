@@ -297,45 +297,53 @@ Right-click :material-mouse-right-click: on your active project ![Active Project
 
 - Within the ![Prefix Icon](../img/editor/Prefix.png) **Scenes** prefix, create a ![New Entity Icon](../img/editor/Entity-New.png) **New Entity** called `Gameplay`
 - Within the [Project Explorer](../editor//projects.md#project-explorer) drag and drop ![Sprite Icon](../img/editor/Sprite.png) **Background** into the main view to create a Node of that Prefab called `m_Background`
-- With `m_Background` Node selected, change the **Sprite** → "State" to `1` (the noon-daylight background)
-- Also change the **Sprite** → "Texture Tiling" to be `3 x 1`
+- ㅤ:material-numeric-1-circle:{.hyindicator}ㅤWith `m_Background` Node selected, change the **Sprite**→**State** to `1` (the noon-daylight background)
+- ㅤ:material-numeric-2-circle:{.hyindicator}ㅤChange the **Sprite**→**Texture Tiling** to be `2 x 1`
+- ㅤ:material-numeric-3-circle:{.hyindicator}ㅤAfter tiling <code>m_Background</code> you will notice a seam where it wraps
 
 <figure>
   <img src="../img/getting-started/flappy-entity-seam.png">
-  <figcaption>After tiling <code>m_Background</code> you will notice seams when it wraps</figcaption>
+  <figcaption></figcaption>
 </figure>
 </div>
 
 ---
 <center><h3>Resolving the seams</h3></center>
 
-The seams in the tiling `m_Background` are due to texture filtering and atlas packing settings. By default assets are assigned `Bilinear` filtering, which samples the four nearest texels and calculates a weighted average to create a smooth gradient. The seams you are seeing on the edges are sampling the nearby transparent texels around the actual image (as it sits on the texture atlas).
+The seams in a tiling Sprite are due to texture filtering and atlas packing settings. By default assets are assigned `Bilinear` filtering, which samples the four nearest texels and calculates a weighted average to create a smooth gradient. The seams you are seeing on the edges are sampling the nearby transparent texels around the actual image (as it sits on the texture atlas).
 
 <figure>
   <img src="../img/getting-started/texture-filters.png">
   <figcaption>Filtering difference if you were to zoom into a texture's texels</figcaption>
  </figure>
 
+To fix this we can set an **extrude** value on the atlas packing settings. This duplicates the outermost texels of each atlas frame into the surrounding padding area to prevent texture bleeding. In our case it will prevent `Bilinear` filtering from sampling transparent texels when tiling.
+
+<div class="grid" markdown>
+
+- ![Save Icon](../img/editor/file-save.png) **Save** all open items
+- Within the [Asset Manager](../editor/asset-manager.md) in the **Bank** groupbox, change the ![Settings Icon](../img/editor/generic-settings.png) **Atlas Bank Settings** → **Packing Options** → **Extrude Amount** to `1`
+- Regenerate the Atlas Bank
+- Optionally change all the assets' properties to use `Nearest` filtering
+
 <div class="grid cards" markdown>
-
--   <h1>ㅤ**Option A:** Keep the `Bilinear` filtering</h1>
-    Set an Extrude value on the atlas packing settings. This duplicates the outermost texels of each atlas frame into the surrounding padding area to prevent texture bleeding. In our case it will prevent `Bilinear` filtering from sampling transparent texels when tiling:<br><br>
-    - Within the [Asset Manager](../editor/asset-manager.md) in the **Bank** groupbox, change the ![Settings Icon](../img/editor/generic-settings.png) **Atlas Bank Settings** → **Packing Options** → **Extrude Amount** to `1`
-    - Regenerate the Atlas Bank
-
--   <h1>:material-check-bold:{.hyindicator}ㅤ**Option B:** Change to `Nearest` filtering (recommended)</h1> 
-    This filtering results in sharp, blocky, pixelated visuals which matches the intended art style, and also naturally avoids the problem all together. Make sure to ![Save Icon](../img/editor/file-save.png) **Save** all open items before changing the following:<br><br>
+-   <h1>:material-check-bold:{.hyindicator}ㅤChange assets to **Nearest filtering** (recommended)</h1> 
+    This filtering results in sharp, blocky, pixelated visuals which matches the intended art style. 
     - Within the [Asset Manager](../editor/asset-manager.md) in the tree view area, select all items (click in tree view then press ++ctrl++ + ++a++)
     - Right-click :material-mouse-right-click: on the selected items and choose ![Asset Properties Icon](../img/editor/AtlasFrame-Settings.png) **Asset Properties**
     - Change **Filtering** to `Nearest` and press OK
     - Repack the assets
 </div>
+</div>
 
+!!! tip "When using Nearest filtering"
+    Having the assets use `nearest` filtering naturally avoids the seam problem all together if the camera's position is snapped to whole pixels. However even with `nearest` filtering there are a few sub-pixel coordinates that can still cause a seam to be seen. So it's a good idea to set the **extrude** amount in the ![Settings Icon](../img/editor/generic-settings.png) **Atlas Bank Settings** regardless of which texture filtering you choose.
 ---
 
-...continuing with our entity ![Entity Icon](../img/editor/entity.png) **Gameplay**
+...continuing with our entity ![Entity Icon](../img/editor/Entity.png) **Gameplay**
 
 - Within the [Project Explorer](../editor//projects.md#project-explorer) drag and drop ![Sprite Icon](../img/editor/Sprite.png) **Ground** into the main view to create a Node of that Prefab called `m_Ground`
+- Change **Sprite** → **Texture Tiling**: `8 x 1`
 
 ## 5. Programming the Game
 
